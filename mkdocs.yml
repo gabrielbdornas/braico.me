@@ -10,7 +10,7 @@ theme:
   name: material
   logo: assets/images/logo-no-background.png
   language: en
-  custom_dir: overrides
+  custom_dir: docs/overrides
   features:
     # - announce.dismiss
     - content.code.annotate
