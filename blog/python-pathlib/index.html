@@ -1,0 +1,1309 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Python pathlib - My Base Knowledge</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/style.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@8.5.1/dist/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-pathlib" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Base Knowledge" class="md-header__button md-logo" aria-label="My Base Knowledge" data-md-component="logo">
+      
+  <img src="../../assets/images/logo-no-background.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Base Knowledge
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python pathlib
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gabrielbdornas/my-base-knowledge" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gabrielbdornas/my-base-knowledge
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  My Base Knowledge
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Base Knowledge" class="md-nav__button md-logo" aria-label="My Base Knowledge" data-md-component="logo">
+      
+  <img src="../../assets/images/logo-no-background.png" alt="logo">
+
+    </a>
+    My Base Knowledge
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gabrielbdornas/my-base-knowledge" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gabrielbdornas/my-base-knowledge
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Base Knowledge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/pythons-standard-library/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python’s standard library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-path-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Path Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passing-in-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passing in a String
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joining-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Joining Paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-system-operations-with-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      File System Operations With Paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-and-writing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading and Writing Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renaming-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renaming Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copying-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-and-deleting-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving and Deleting Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-empty-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Empty Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-pathlib-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python pathlib Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python pathlib Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#counting-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counting Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/49699290" alt="Gabriel Braico Dornas">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Gabriel Braico Dornas
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2023-10-19 00:00:00" class="md-ellipsis">October 19, 2023</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../category/python/">Python</a>, 
+                              <a href="../category/pythons-standard-library/">Python’s standard library</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              10 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+  
+    <a href="https://github.com/gabrielbdornas/my-base-knowledge/edit/main/docs/blog/posts/20240610_python_path_lib.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="python-pathlib">Python pathlib<a class="headerlink" href="#python-pathlib" title="Permanent link">⚓︎</a></h1>
+<p>Working with files and interacting with the file system are common tasks for Python developers.
+That’s where pathlib comes in.
+Let's understand how it works with the help of the <a href="https://realpython.com/python-pathlib/">Python's pathlib Module: Taming the File System</a> post.</p>
+<!-- more -->
+
+<ul>
+<li>
+<p>The pathlib module is part of Python’s standard library.</p>
+</li>
+<li>
+<p>The pathlib’s Path class works the same way on different operating systems.</p>
+</li>
+<li>
+<p>One motivation behind pathlib is to represent the file system with dedicated objects instead of strings<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+</li>
+<li>
+<p>Traditionally, Python has represented file paths using regular strings. However, paths are more than plain strings.</p>
+</li>
+<li>
+<p>As an initial example of pathlib usage, the following code block moves files into a subfolder:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span> <span class="c1"># (1)! # (2)!</span>
+
+<span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
+    <span class="n">new_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;archive&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">file_path</span><span class="o">.</span><span class="n">name</span>
+    <span class="n">file_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Because you’ll mainly be working with the Path class of pathlib, importing it as <code>from pathlib import Path</code> saves you a few keystrokes in your code. This way, you can work with Path directly, rather than importing pathlib as a module and referring to <code>pathlib.Path</code>.</li>
+</ol>
+</li>
+</ul>
+<h2 id="using-path-methods">Using Path Methods<a class="headerlink" href="#using-path-methods" title="Permanent link">⚓︎</a></h2>
+<div class="annotate">
+<ul>
+<li>
+<p>Once you’ve imported Path, you can make use of existing methods to get the <strong>current working directory</strong> (<code>cwd</code>) (1), or your user’s <strong>home directory</strong>.</p>
+</li>
+<li>
+<p>To get your current working directory, you can use <code>.cwd()</code>:</p>
+</li>
+</ul>
+</div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The <strong>current working directory</strong> is the directory in the file system that the current process is operating in. Using the home directory as a starting point, you can specify paths that’ll <strong>work on different machines, independent of any specific usernames</strong>.</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="c1"># (1)!</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/Desktop/codei&#39;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="c1"># (1)!</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/Users/gabrielbdornas/Desktop/codei&#39;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="c1"># (1)!</span>
+<span class="n">WindowsPath</span><span class="p">(</span><span class="s1">&#39;C:/Users/gabrielbdornas/Desktop/codei&#39;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.</li>
+</ol>
+</div>
+</div>
+</div>
+<ul>
+<li>To get your home directory, you can use <code>.home()</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="c1"># (1)!</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/&#39;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
+</ol>
+<h2 id="passing-in-a-string">Passing in a String<a class="headerlink" href="#passing-in-a-string" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Instead of starting in your user’s home directory or your current working directory, you can point to a directory or file directly by passing its string representation into Path:</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/home/gabrielbdornas/Desktop/codei/file.txt&quot;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/Desktop/codei/file.txt&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\gabrielbdornas\codei\file.txt&quot;</span><span class="p">)</span>
+<span class="n">WindowsPath</span><span class="p">(</span><span class="s1">&#39;C:/Users/gabrielbdornas/Desktop/codei/file.txt&#39;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> On Windows, the <strong>path separator</strong> is a backslash (). However, in many contexts, the backslash is also used as an escape character to represent non-printable characters. To avoid problems, use raw string literals to represent Windows paths like <code>r"C:\Users"</code>.</li>
+</ol>
+</div>
+</div>
+</div>
+<details class="note">
+<summary>The <code>__file__</code> attribute</summary>
+<p>An idiomatic way of working with the current module’s location as the path is using <code>__file__</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># hello.py</span>
+
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You can find me here: </span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The <code>__file__</code> attribute contains the path to the file that Python is currently importing or executing. You can pass in <code>__file__</code> to Path when you need to work with the path to the module itself. For example, maybe you want to get the parent directory with <code>.parent</code>.</li>
+</ol>
+</details>
+<h2 id="joining-paths">Joining Paths<a class="headerlink" href="#joining-paths" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>A third way to construct a path is to join the parts of the path using the special forward slash operator (<code>/</code>):</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
+    <span class="n">new_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;archive&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">file_path</span><span class="o">.</span><span class="n">name</span> <span class="c1"># (1)!</span>
+    <span class="n">file_path</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The forward slash operator can join several paths or a mix of paths and strings as long as you include one Path object. <strong>You use a forward slash regardless of your platform’s actual path separator</strong>.</li>
+</ol>
+<details class="note">
+<summary>The <code>.joinpath()</code> method</summary>
+<ul>
+<li>If you don’t like the special slash notation, then you can do the same operation with the <code>.joinpath()</code> method:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;scripts&quot;</span><span class="p">,</span> <span class="s2">&quot;test.py&quot;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/python/scripts/test.py&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<h2 id="file-system-operations-with-paths">File System Operations With Paths<a class="headerlink" href="#file-system-operations-with-paths" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>
+<p>A file or directory path consists of different parts. When you use pathlib, these parts are conveniently available as properties. Basic examples include:</p>
+<ul>
+<li><code>.name</code>: The filename without any directory</li>
+<li><code>.stem</code>: The filename without the file extension</li>
+<li><code>.suffix</code>: The file extension</li>
+<li><code>.anchor</code>: The part of the path before the directories</li>
+<li><code>.parent</code>: The directory containing the file, or the parent directory if the path is a directory</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">path</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s2">&quot;/home/gabrielbdornas/codei/test.md&quot;</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">name</span>
+<span class="s1">&#39;test.md&#39;</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span>
+<span class="s1">&#39;test&#39;</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">suffix</span>
+<span class="s1">&#39;.md&#39;</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">anchor</span>
+<span class="s1">&#39;/&#39;</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span> <span class="c1"># (1)!</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s2">&quot;/home/gabrielbdornas/codei&quot;</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas&#39;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Note that <code>.parent</code> returns a new Path object, whereas the other properties return strings. This means, for instance, that you can chain <code>.parent</code> in the last example or even combine it with the slash operator to create completely new paths.</li>
+</ol>
+</li>
+</ul>
+<h2 id="reading-and-writing-files">Reading and Writing Files<a class="headerlink" href="#reading-and-writing-files" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Consider that you want to print all the items on a shopping list that you wrote down in a Markdown file. The content of shopping_list.md looks like this:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&lt;!-- shopping_list.md --&gt;
+
+<span class="gh"># Shopping List</span>
+
+<span class="gu">## Fruit</span>
+
+<span class="k">*</span><span class="w"> </span>Banana
+<span class="k">*</span><span class="w"> </span>Apple
+<span class="k">*</span><span class="w"> </span>Peach
+
+<span class="gu">## Candy</span>
+
+<span class="k">*</span><span class="w"> </span>Chocolate
+<span class="k">*</span><span class="w"> </span>Nougat Bits
+</code></pre></div>
+<ul>
+<li>
+<p>With pathlib, you can use <code>open()</code> directly on Path objects.</p>
+</li>
+<li>
+<p>A first draft of your script that finds all the items in <code>shopping_list.md</code> and prints them may look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># read_shopping_list.py</span>
+
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;shopping_list.md&quot;</span>
+<span class="k">with</span> <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">md_file</span><span class="p">:</span> <span class="c1"># (1)!</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">md_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">groceries</span><span class="p">))</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> In fact, <code>Path.open()</code> is calling the built-in <code>open()</code> function behind the scenes. That’s why you can use parameters like mode and encoding with <code>Path.open()</code>.</li>
+</ol>
+</li>
+<li>
+<p>On top of that, pathlib offers some convenient methods to read and write files:</p>
+<ul>
+<li><code>.read_text()</code> opens the path in text mode and returns the contents as a string.</li>
+<li><code>.read_bytes()</code> opens the path in binary mode and returns the contents as a byte string.</li>
+<li><code>.write_text()</code> opens the path and writes string data to it<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</li>
+<li><code>.write_bytes()</code> opens the path in binary mode and writes data to it<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</li>
+</ul>
+</li>
+<li>
+<p>Therefore, you can update <code>read_shopping_list.py</code> using <code>.read_text()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># read_shopping_list.py</span>
+
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;shopping_list.md&quot;</span> <span class="c1"># (1)!</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">groceries</span><span class="p">))</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You can also specify paths directly as in <code>Path("shopping_list.md")</code>, <strong>in which case they’re interpreted relative to the current working directory</strong>.</li>
+</ol>
+</li>
+<li>
+<p>If you want to create a plain shopping list that only contains the groceries, then you can use <code>.write_text()</code> in a similar fashion:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># write_plain_shoppinglist.py</span>
+
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">content</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;shopping_list.md&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)]</span>
+
+<span class="n">Path</span><span class="p">(</span><span class="s2">&quot;plain_list.md&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">groceries</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="renaming-files">Renaming Files<a class="headerlink" href="#renaming-files" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>
+<p>When you want to rename files, you can use <code>.with_stem()</code>, <code>.with_suffix()</code>, or <code>.with_name()</code>. They return the original path but with the filename, the file extension, or both replaced. You can use all of them in combination with <code>.replace()</code>, example:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.txt&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.txt&#39;</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">md_path</span> <span class="o">=</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s1">&#39;.md&#39;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.md&#39;</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">md_path</span><span class="p">)</span> <span class="c1"># (2)!</span>
+</code></pre></div>
+<ol>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using <code>.with_suffix()</code> returns a new path.</p>
+</li>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> To actually rename the file, you use <code>.replace()</code>. This moves <code>txt_path</code> to <code>md_path</code> and renames it when saving.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If you want to change the complete filename, including the extension, then you can use <code>.with_name()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.txt&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.txt&#39;</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">md_path</span> <span class="o">=</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">with_name</span><span class="p">(</span><span class="s1">&#39;goodbye.md&#39;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/goodbye.md&#39;</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">md_path</span><span class="p">)</span> <span class="c1"># (1)!</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> It renames <code>hello.txt</code> to <code>goodbye.md</code>.</li>
+</ol>
+</li>
+</ul>
+<h2 id="copying-files">Copying Files<a class="headerlink" href="#copying-files" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>
+<p>Surprisingly, Path doesn’t have a method to copy files. But with the knowledge that you’ve gained about pathlib so far, you can create the same functionality with a few lines of code:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;shopping_list.md&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">destination</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">with_stem</span><span class="p">(</span><span class="s1">&#39;shopping_list_02&#39;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">destination</span><span class="o">.</span><span class="n">write_bytes</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">read_bytes</span><span class="p">())</span> <span class="c1"># (2)!</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You’re using <code>.with_stem()</code> to create the new filename without changing the extension.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The actual copying takes place here, where you use <code>.read_bytes()</code> to read the content of source and then write this content to destination using <code>.write_bytes()</code>.</li>
+</ol>
+</li>
+</ul>
+<h2 id="moving-and-deleting-files">Moving and Deleting Files<a class="headerlink" href="#moving-and-deleting-files" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>
+<p>Through pathlib, you also have access to basic file system–level operations like moving, updating, and even deleting files. For the most part, these methods don’t give a warning or wait for confirmation before getting rid of information or files. So, be careful when using these methods<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</p>
+</li>
+<li>
+<p>To move a file, you can use <code>.replace()</code><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. To avoid possibly overwriting the destination path, you can test whether the destination exists before replacing:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;hello.py&#39;</span><span class="p">)</span>
+<span class="n">destination</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;goodbye.py&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">destination</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+  <span class="n">source</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>However, this does leave the door open for a possible <a href="https://en.wikipedia.org/wiki/Race_condition">race condition</a>. Another process may add a file at the destination path between the execution of the if statement and the <code>.replace()</code> method. If that’s a concern, then a safer way is to open the destination path for exclusive creation then explicitly copy the source data and delete the source file afterward:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;hello.py&#39;</span><span class="p">)</span>
+<span class="n">destination</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;goodbye.py&#39;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+  <span class="k">with</span> <span class="n">destination</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;xb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">read_bytes</span><span class="p">())</span>
+<span class="k">except</span> <span class="ne">FileExistsError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;File </span><span class="si">{</span><span class="n">destination</span><span class="si">}</span><span class="s1"> existis already&#39;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">source</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span> <span class="c1"># (2)!</span>
+</code></pre></div>
+<ol>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> If destination already exists, it catches a <code>FileExistsError</code> and prints a warning message.</p>
+</li>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> To perform a move, you need to delete source with <code>.unlink()</code> after the copy is done. Using <code>else</code> ensures that the source file isn’t deleted if the copying fails.</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="creating-empty-files">Creating Empty Files<a class="headerlink" href="#creating-empty-files" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>
+<p>To create an empty file with pathlib, you can use <code>.touch()</code>. This method is intended to update a file’s modification time, but you can use its side effect to create a new file:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;hello.py&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filename</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+<span class="kc">False</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filename</span><span class="o">.</span><span class="n">touch</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filename</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="c1"># (1)!</span>
+<span class="kc">True</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filename</span><span class="o">.</span><span class="n">touch</span><span class="p">()</span> <span class="c1"># (2)!</span>
+</code></pre></div>
+<ol>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You use <code>.exists()</code> both to verify that the file didn’t exist before and then to check that it was successfully created.</p>
+</li>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> If you use <code>.touch()</code> again, then it updates the file’s modification time. If you don’t want to modify files accidentally, then you can use the <code>exist_ok</code> parameter and set it to False as in <code>filename.touch(exist_ok=False)</code>.</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="python-pathlib-examples">Python pathlib Examples<a class="headerlink" href="#python-pathlib-examples" title="Permanent link">⚓︎</a></h2>
+<h3 id="counting-files">Counting Files<a class="headerlink" href="#counting-files" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>With pathlib, you can conveniently use the <code>.iterdir()</code> method, which iterates over all the files in the given directory:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">suffix</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())</span> <span class="c1"># (1)!</span>
+<span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;.pdf&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;.py&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You can create more flexible file listings with the methods <code>.glob()</code> and <code>.rglob()</code>. For example, <code>Path.cwd().glob("*.txt")</code> returns all the files with a <code>.txt</code> suffix in the current directory.</li>
+</ol>
+</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>In general, you should try to use Path objects as much as possible in your code to take advantage of their benefits, but converting them to strings can be necessary in certain contexts. <strong>Some libraries and APIs still expect you to pass file paths as strings, so you may need to convert a Path object to a string before passing it to certain functions</strong>. You'll see that, on Windows, although you enter paths with backslashes, pathlib represents them with the forward slash (/) as the path separator. This representation is named POSIX style. POSIX stands for <a href="https://en.wikipedia.org/wiki/POSIX">Portable Operating System Interface</a>, which is a standard for maintaining the compability between operating systems.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>When using these methods, Python overwrites any existing files on the same path without giving you any notice. <strong>That means you could erase all your hard work with a single keystroke</strong>! As always, when you write files with Python, you should be cautious of what your code is doing. The same is true when you’re renaming files.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>A good way to protect yoursef of this kind of troble is using version control system while writing your codes.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 13, 2024 20:51:15</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 13, 2024 20:30:50</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+  
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <script src="https://giscus.app/client.js"
+    data-repo="gabrielbdornas/my-base-knowledge"
+    data-repo-id="R_kgDOJZbL1A"
+    data-category="Show and tell"
+    data-category-id="DIC_kwDOJZbL1M4CYHm-"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/channel/UCoMuk7Pk3VzUYQtuqa6fLTw" target="_blank" rel="noopener" title="My YouTube Channel." class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search" target="_blank" rel="noopener" title="Material for MkDocs Icons, Emojis." class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v448c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4 44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0-35.1-17.6-75.4-22-113.5-12.5L64 48V32z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../assets/style.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
