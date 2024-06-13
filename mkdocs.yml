@@ -97,7 +97,6 @@ plugins:
   - search:
       lang:
         - en
-        - pt
   - blog:
       post_url_format: "{slug}"
       archive: false
