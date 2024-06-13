@@ -97,16 +97,12 @@ extra: # Footer
     - icon: fontawesome/solid/flag
       name: Material for MkDocs Icons, Emojis.
       link: https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
-  version:
-    provider: mike
 
 plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: datetime
       enable_creation_date: true
-  - mike:
-      version_selector: true
   - tags:
       tags_file: tags.md
   - search:
