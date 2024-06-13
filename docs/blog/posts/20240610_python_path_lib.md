@@ -8,7 +8,7 @@ categories:
   - Python’s standard library
 ---
 
-# Python path lib
+# Python pathlib
 
 Working with files and interacting with the file system are common tasks for Python developers.
 That’s where pathlib comes in.
