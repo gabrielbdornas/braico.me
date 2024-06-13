@@ -103,8 +103,6 @@ plugins:
       enable_creation_date: true
       type: datetime
       enable_creation_date: true
-  - tags:
-      tags_file: tags.md
   - search:
       lang:
         - en
