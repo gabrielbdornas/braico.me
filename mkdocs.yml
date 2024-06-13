@@ -7,6 +7,8 @@ edit_uri: edit/main/docs/
 
 # Configuration
 theme:
+  icon:
+    logo: octicons/code-review-16
   name: material
   language: en
   custom_dir: docs/overrides
