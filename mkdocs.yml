@@ -7,9 +7,11 @@ edit_uri: edit/main/docs/
 
 # Configuration
 theme:
+  name: material
   icon:
     logo: octicons/code-review-16
-  name: material
+    edit: material/pencil
+    view: material/eye
   language: en
   custom_dir: docs/overrides
   features:
@@ -42,10 +44,6 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.png
-  icon:
-    logo: logo
-    edit: material/pencil
-    view: material/eye
 
 markdown_extensions:
   - admonition
