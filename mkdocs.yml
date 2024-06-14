@@ -6,7 +6,7 @@ repo_url: https://github.com/gabrielbdornas/code
 edit_uri: edit/main/docs/
 
 nav:
-  - Início: index.md
+  - Home: index.md
   - Blog:
     - blog/index.md
 
