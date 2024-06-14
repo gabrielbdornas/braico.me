@@ -1,9 +1,14 @@
-site_name: Code
+site_name: Braico.me
 
 # Repository
 repo_name: gabrielbdornas/code
 repo_url: https://github.com/gabrielbdornas/code
 edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Things I Can Do: /#things-i-can-do
+  - Blog: blog/index.md
 
 # Configuration
 theme:
@@ -12,6 +17,7 @@ theme:
     logo: octicons/code-review-16
     edit: material/pencil
     view: material/eye
+  favicon: assets/favicon.svg
   language: en
   custom_dir: docs/overrides
   features:
@@ -29,22 +35,10 @@ theme:
     - content.action.edit
     - content.action.view
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    - scheme: dark-blue
   font:
-    text: Roboto
+    text: Plus Jakarta Sans
     code: Roboto Mono
-  favicon: assets/favicon.png
 
 markdown_extensions:
   - admonition
