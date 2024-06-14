@@ -86,9 +86,9 @@ extra: # Footer
     - icon: fontawesome/brands/youtube
       name: My YouTube Channel.
       link: https://www.youtube.com/channel/UCoMuk7Pk3VzUYQtuqa6fLTw
-    - icon: fontawesome/solid/flag
-      name: Material for MkDocs Icons, Emojis.
-      link: https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
+    - icon: simple/github
+      name: My GitHub Account.
+      link: http://github.com/gabrielbdornas
 
 plugins:
   - git-revision-date-localized:
