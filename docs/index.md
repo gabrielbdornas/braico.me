@@ -14,65 +14,63 @@ hide:
   }
 </style>
 
-## Conheça mais sobre o projeto { .h2-center }
+## Things I Can Do { .h2-center }
 
 <div class="grid cards card-border-radius" markdown>
 
-- <p class="text-larger" markdown>:simple-powerautomate:{ .lg .middle .light-red } __Power Automate__</p>
+- <p class="text-larger" markdown>:simple-python:{ .lg .middle .light-red } __Write code in Python__</p>
 
     ---
 
-    Ferramenta de automatização já disponibilizada para a maioria dos órgãos e entidades do Governo de Minas pelo pacote Office 365.
+    As Python's official documentation says, it's a powerful and easy to learn programming language.
 
-    [:octicons-arrow-right-24: Comece a utilizar](blog/posts/20231226_sobre/index.md)
+    [:octicons-arrow-right-24: Python official documentation](https://docs.python.org/3/tutorial/index.html)
 
-- <p class="text-larger" markdown>:material-tools:{ .lg .middle .light-red } __Biblioteca de robôs__</p>
-
-    ---
-
-    Serve para inserir processos no SEI, utilizar SIAD, SIAFI e SISAP, extrair dados de PDFs e fazer empenhos, liquidações e pagamentos.
-
-    [:octicons-arrow-right-24: E muito mais](robos/index.md)
-
-
-- <p class="text-larger" markdown>:material-head-sync:{ .lg .middle .light-red } __Descomplicado__</p>
+- <p class="text-larger" markdown>:simple-git:{ .lg .middle .light-red } __Use Git and GitHub like a pro__</p>
 
     ---
 
-    Soluções ao alcance do servidor mineiro, sem necessidade de conhecimentos aprofundados em informática ou programação.
+    Using Git and GitHub is cool because they enable collaboration, version control, and seamless project management.
 
-    [:octicons-arrow-right-24: Entenda](blog/posts/20231226_descomplicado/index.md)
+    [:octicons-arrow-right-24: Visit my account](https://github.com/gabrielbdornas)
 
 
-- <p class="text-larger" markdown>:material-run-fast:{ .lg .middle .light-red } __Simplifica__</p>
-
-    ---
-
-    Elimina processos repetitivos, liberando tempo para atividades mais importantes.
-
-    [:octicons-arrow-right-24: Vamos lá](blog/posts/20231122_introducao_power_automate/index.md)
-
-- <p class="text-larger" markdown>:material-book-open-variant:{ .lg .middle .light-red } __Transmite Conhecimento__</p>
+- <p class="text-larger" markdown>:simple-markdown:{ .lg .middle .light-red } __Write docs as code__</p>
 
     ---
 
-    Aprenda a utilizar ferramentas de automatização.
+    Let's focus our attention on creating good quality content and let the right tools let the hard work for us.
 
-    [:octicons-arrow-right-24: Curso](https://www.ead.planejamento.mg.gov.br/course/view.php?id=98)
+    [:octicons-arrow-right-24: Read more about this philosophy](https://www.writethedocs.org/guide/docs-as-code/)
 
-- <p class="text-larger" markdown>:fontawesome-solid-infinity:{ .lg .middle .light-red } __Inovação__</p>
+
+- <p class="text-larger" markdown>:fontawesome-brands-linux:{ .lg .middle .light-red } __Work with Linux__</p>
 
     ---
 
-    Amplia os horizontes para adoção de tecnologias inovadoras como inteligência artificial.
+    Linux ecosystem grants the freedom of open source, the opportunity for innovation, and the excitement of continuous learning.
 
-    [:octicons-arrow-right-24: Tendências](blog/posts/20231226_inovacao/index.md)
+    [:octicons-arrow-right-24: Get to know Pop!_Os](https://pop.system76.com/)
+
+- <p class="text-larger" markdown>:simple-opensourcehardware:{ .lg .middle .light-red } __Open source contributions__</p>
+
+    ---
+
+    Open source fosters collaborative innovation, and has the potential to enhance public administration efficiency.
+
+    [:octicons-arrow-right-24: Read more about it](https://en.wikipedia.org/wiki/Open_source)
+
+- <p class="text-larger" markdown>:simple-powerautomate:{ .lg .middle .light-red } __Use Power Automate__</p>
+
+    ---
+
+    Power Automate empowers non-programmers to automate tasks, boost productivity, and innovate effortlessly.
+
+    [:octicons-arrow-right-24: Get to know the Automatiza.MG project](https://www.planejamento.mg.gov.br/automatizamg)
 
 </div>
 
-## Veja funcionando { .h2-center }
-
-![type:video](https://www.youtube.com/embed/2GMy8TcuQ6A){: #iframe-youtube style='width: 60%; height: 17em; border-radius:20px'}
+<!--
 
 ## O Projeto em Números { .h2-center }
 
@@ -256,3 +254,5 @@ Clique [aqui](blog/posts/20231229_metricas/index.md) para mais detalhes sobre es
     </p>
 
 </div>
+
+-->
