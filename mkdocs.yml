@@ -1,4 +1,4 @@
-site_name: Code
+site_name: Braico.me
 
 # Repository
 repo_name: gabrielbdornas/code
@@ -7,8 +7,8 @@ edit_uri: edit/main/docs/
 
 nav:
   - Home: index.md
-  - Blog:
-    - blog/index.md
+  - Things I Can Do: /#things-i-can-do
+  - Blog: blog/index.md
 
 # Configuration
 theme:

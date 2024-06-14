@@ -1,6 +1,6 @@
 ---
 template: index.html
-title: Code WithMe
+title: Braico.Me
 hide:
   - navigation
   - toc
