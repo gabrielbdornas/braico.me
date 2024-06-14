@@ -27,6 +27,7 @@ theme:
     - search.suggest
     - toc.follow
     - content.action.edit
+    - content.action.view
   palette:
     - scheme: default
       primary: indigo
