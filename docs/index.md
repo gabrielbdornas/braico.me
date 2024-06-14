@@ -1,6 +1,6 @@
 ---
 template: index.html
-title: Coda Comigo
+title: Code WithMe
 hide:
   - navigation
   - toc
