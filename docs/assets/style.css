@@ -8,10 +8,6 @@ body p {
   text-align: justify;
 }
 
-.md-header__topic span {
-  display: none;
-}
-
 .p-center {
   text-indent: 0px;
   text-align: center;
