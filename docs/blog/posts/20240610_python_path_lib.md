@@ -27,14 +27,16 @@ Let's understand how it works with the help of the [Python's pathlib Module: Tam
 - As an initial example of pathlib usage, the following code block moves files into a subfolder:
 
     ```Python
-    from pathlib import Path # (1)! # (2)!
+    from pathlib import Path # (1)!
 
     for file_path in Path.cwd().glob("*.txt"):
-        new_path = Path("archive") / file_path.name
+        new_path = Path("archive") / file_path.name # (2)!
         file_path.replace(new_path)
     ```
 
     1. :man_raising_hand: Because you’ll mainly be working with the Path class of pathlib, importing it as `from pathlib import Path` saves you a few keystrokes in your code. This way, you can work with Path directly, rather than importing pathlib as a module and referring to `pathlib.Path`.
+
+    2. :man_raising_hand: The archive's folder must exists to ensure `.replace()` method works.
 
 ## Using Path Methods
 
@@ -56,7 +58,7 @@ Let's understand how it works with the help of the [Python's pathlib Module: Tam
     PosixPath('/home/gabrielbdornas/Desktop/codei')
     ```
 
-    1. :man_raising_hand: Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.
+    1. :man_raising_hand: With `Path.cwd() `and `Path.home()`, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.
 
 === "macOS"
 
@@ -66,7 +68,7 @@ Let's understand how it works with the help of the [Python's pathlib Module: Tam
     PosixPath('/Users/gabrielbdornas/Desktop/codei')
     ```
 
-    1. :man_raising_hand: Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.
+    1. :man_raising_hand: With `Path.cwd() `and `Path.home()`, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.
 
 === "Windows"
 
@@ -76,7 +78,7 @@ Let's understand how it works with the help of the [Python's pathlib Module: Tam
     WindowsPath('C:/Users/gabrielbdornas/Desktop/codei')
     ```
 
-    1. :man_raising_hand: Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.
+    1. :man_raising_hand: With `Path.cwd() `and `Path.home()`, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.
 
 - To get your home directory, you can use `.home()`:
 
@@ -86,7 +88,7 @@ Let's understand how it works with the help of the [Python's pathlib Module: Tam
 PosixPath('/home/gabrielbdornas/')
 ```
 
-1. :man_raising_hand: With `Path.cwd() `and `Path.home()`, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.
+1. :man_raising_hand: Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.
 
 ## Passing in a String
 
@@ -381,8 +383,90 @@ for file_path in Path.cwd().glob("*.txt"):
     Counter({'.md': 2, '.txt': 4, '.pdf': 2, '.py': 1})
     ```
 
-    1. :man_raising_hand: You can create more flexible file listings with the methods `.glob()` and `.rglob()`. For example, `Path.cwd().glob("*.txt")` returns all the files with a `.txt` suffix in the current directory.
+    1. :man_raising_hand: You can create more flexible file listings with the methods `.glob()` and `.rglob()`. For example, `Path.cwd().glob("*.txt")` returns all the files with a `.txt` suffix in the current directory. If you want to recursively find all the files in both the directory and its subdirectories, then you can use `.rglob()`.
 
+### Displaying a Directory Tree
+
+- In this example, you define a function named `tree()`, which will print a visual tree representing the file hierarchy, rooted at a given directory. This is useful when, for example, you want to peek into the subdirectories of a project.
+
+```python
+# display_dir_tree.py
+
+def tree(directory):
+    print(f"+ {directory}")
+    for path in sorted(directory.rglob("*")):
+        depth = len(path.relative_to(directory).parts) # (1)!
+        spacer = "    " * depth
+        print(f"{spacer}+ {path.name}")
+```
+
+1. :man_raising_hand: Note that you need to know how far away from the root directory a file is located. To do this, you first use `.relative_to()` to represent a path relative to the root directory. Then, you use the `.parts` property to count the number of directories in the representation.
+
+- When run, this function creates a visual tree like the following:
+
+```python
+>>> from pathlib import Path
+>>> from display_dir_tree import tree
+>>> tree(Path.cwd())
++ /home/gabrielbdornas/codei
+    + directory_1
+        + file_a.md
+    + directory_2
+        + file_a.md
+        + file_b.pdf
+        + file_c.py
+    + file_1.txt
+    + file_2.txt
+```
+
+### Finding the Most Recently Modified File
+
+- The `.iterdir()`, `.glob()`, and `.rglob()` methods are great fits for generator expressions and list comprehensions.To find the most recently modified file in a directory, you can use the `.stat()` method to get information about the underlying files. For instance, `.stat().st_mtime` gives the time of last modification of a file:
+
+```python
+>>> from pathlib import Path
+>>> from datetime import datetime
+>>> directory = Path.cwd()
+>>> time, file_path = max((f.stat().st_mtime, f) for f in directory.iterdir())
+>>> print (datetime.fromtimestamp(time), file_path)
+2024-06-18 11:23:56.977817 /home/gabrielbdornas/codei/test001.txt
+```
+
+### Creating a Unique Filename
+
+- In the last example, you’ll construct a unique numbered filename based on a template string. This can be handy when you don’t want to overwrite an existing file if it already exists:
+
+```python
+# unique_path.py
+
+def unique_path(directory, name_pattern): # (1)!
+  counter = 0
+  while True:
+    counter += 1
+    path = directory / name_pattern.format(counter)
+    if not path.exists():
+      return path
+```
+
+1. :man_raising_hand: In `unique_path()`, you specify a pattern for the filename, with room for a counter. Then, you check the existence of the file path created by joining a directory and the filename, including a value for the counter. If it already exists, then you increase the counter and try again.
+
+- Now you can use the script above to get unique filenames:
+
+```python
+>>> from pathlib import Path
+>>> from unique_path import unique_path
+>>> template = "test{:03d}.txt"
+>>> unique_path(Path.cwd(), template)
+PosixPath("/home/gabrielbdornas/codei/test003.txt") # (1)!
+```
+
+1. :man_raising_hand: If the directory already contains the files `test001.txt` and `test002.txt`, then the above code will set path to `test003.txt`.
+
+## Conclusion
+
+- Python’s pathlib module provides a modern and Pythonic way of working with file paths, making code more readable and maintainable. With pathlib, you can represent file paths with dedicated Path objects instead of plain strings[^1].
+
+- The pathlib module makes dealing with file paths convenient by providing helpful methods and properties. Peculiarities of the different systems are hidden by the Path object, which makes your code more consistent across operating systems.
 
 [^1]: In general, you should try to use Path objects as much as possible in your code to take advantage of their benefits, but converting them to strings can be necessary in certain contexts. **Some libraries and APIs still expect you to pass file paths as strings, so you may need to convert a Path object to a string before passing it to certain functions**. You'll see that, on Windows, although you enter paths with backslashes, pathlib represents them with the forward slash (/) as the path separator. This representation is named POSIX style. POSIX stands for [Portable Operating System Interface](https://en.wikipedia.org/wiki/POSIX), which is a standard for maintaining the compability between operating systems.
 
