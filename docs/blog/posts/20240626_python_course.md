@@ -30,7 +30,7 @@ Get ready to join the thriving Python community, let's get started!
 
 - Here is your first Python program:
 
-    ```python
+    ```python exec="1" source="tabbed-left" result="ini"
     print("Gabriel Braico Dornas") # (1)!
     ```
 
@@ -38,9 +38,9 @@ Get ready to join the thriving Python community, let's get started!
 
 - The program is executed line by line.
 
-    ```python
-    print('o----') # (1)!
-    print(' ||||')
+    ```python exec="1" source="tabbed-left" result="ini"
+    print("o----") # (1)!
+    print(" ||||")
     ```
 
     1. :man_raising_hand: Here, `o----` is a string (`str`) or a series of characters.
