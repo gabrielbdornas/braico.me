@@ -65,7 +65,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.snippets:
       auto_append:
-        - abbreviations.md
+        - includes/abbreviations.md
   - pymdownx.tabbed:
       alternate_style: true
 
@@ -98,3 +98,6 @@ plugins:
       archive: false
       categories_toc: true
       post_excerpt: required
+
+watch:
+  - includes
