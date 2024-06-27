@@ -22,6 +22,7 @@ theme:
   custom_dir: docs/overrides
   features:
     - content.code.annotate
+    - content.code.copy
     - content.tooltips
     - navigation.indexes
     - navigation.sections
