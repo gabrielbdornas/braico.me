@@ -190,8 +190,57 @@ Get ready to join the thriving Python community, let's get started!
         print(name + ' likes ' + color) # (1)!
         ```
 
-        1. :man_raising_hand: As whe see, `print(name, 'likes', color)` will work as well. Type `help(print)` in [Python interpreter](https://docs.python.org/3/tutorial/interpreter.html) to understand why we don't need to use spaces in the "likes" `string` whith this approach.
+        1. :man_raising_hand: As you can see, `print(name, 'likes', color)` will work as well. Type `help(print)` in [Python interpreter](https://docs.python.org/3/tutorial/interpreter.html) to understand why we don't need to use spaces in the "likes" `string` whith this approach.
 
+## Type convertion
 
+- Calculate the user's age:
+
+    ```python
+    birth_year = input('Birth year: ')
+    age = 2024 - birth_year
+    print(age) # (1)!
+    ```
+
+    1. :man_raising_hand: Never be afraid to the error messages. They tend to be really useful. Just read it. Then, try to figure it out what's going on.
+
+- Refactoring the code to fix the error:
+
+    ```python
+    birth_year = input('Birth year: ') # (1)!
+    print(type(birth_year)) # (2)!
+    birth_year = int(birth_year) # (3)!
+    print(type(birth_year)) # (4)!
+    age = 2024 - birth_year # (5)!
+    print(age)
+    ```
+
+    1. :man_raising_hand: The `input()` functions always returns a `str`, even if the user type a number.
+
+    2. :man_raising_hand: The `type()` function confirms that the type of the variable `birth_year` is `str`, which means that the expression `2024 - birth_year` was evaluate as `2024 - '1985'` in the last example.
+
+    3. :man_raising_hand: The `int()` function converts the variable from `str` to `int`. The `float()`, `bool()` and `str()` functions are examples of other convertion type functions. Try them out!
+
+    4. :man_raising_hand: The `type()` function confirms that the type of the variable `birth_year`, now, is `int`.
+
+    5. :man_raising_hand: The expression `2024 - birth_year`, now, are going to be evaluate as `2024 - 1985`.
+
+??? question "What is your user's weight in kilograms?"
+
+    - As the user their weight in pounds, convert it to kilograms and print on the terminal.
+
+    ??? "Give it a try before see my solution."
+
+        ```python
+        weight_lbs = int(input('What your weight in pounds? ')) # (1)!
+        weight_kg = weight_lbs * 0.45  # (2)!
+        print(weight_kg) # (3)!
+        ```
+
+        1. :man_raising_hand: As you can see, `int(input())` will work as well. First the Python interpreter will evaluate the expression inside the `input()`, then convert it to `int` using the `int()` function.
+
+        2. :man_raising_hand: The `0.45` number is an example of the `float` data type or a number with a decimal point.
+
+        2. :man_raising_hand: What if we use the `print('Your weight in kilograms is ' + weight_kg)` expression?
 
 [^1]: Idea from the [Creating Patterns in Python Medium post](https://mardiyyah.medium.com/creating-patterns-in-python-learnpythonthroughprojects-series-7-3e78db1b3a04).
