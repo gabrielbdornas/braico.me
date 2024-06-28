@@ -493,8 +493,44 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#displaying-a-directory-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Displaying a Directory Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-most-recently-modified-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the Most Recently Modified File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-unique-filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Unique Filename
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
   
 </li>
       
@@ -554,7 +590,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2023-10-19 00:00:00" class="md-ellipsis">October 19, 2023</time>
+                        <time datetime="2024-06-10 00:00:00" class="md-ellipsis">June 10, 2024</time>
                       </div>
                     </li>
                     
@@ -577,7 +613,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              10 min read
+                              13 min read
                             
                           </span>
                         </div>
@@ -627,21 +663,26 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <p>The pathlib’s Path class works the same way on different operating systems.</p>
 </li>
 <li>
-<p>One motivation behind pathlib is to represent the file system with dedicated objects instead of strings<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>One motivation behind pathlib is to represent the file system with dedicated objects instead of strings<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
 </li>
 <li>
 <p>Traditionally, Python has represented file paths using regular strings. However, paths are more than plain strings.</p>
 </li>
 <li>
 <p>As an initial example of pathlib usage, the following code block moves files into a subfolder:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span> <span class="c1"># (1)! # (2)!</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span> <span class="c1"># (1)!</span>
 
 <span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
-    <span class="n">new_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;archive&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">file_path</span><span class="o">.</span><span class="n">name</span>
+    <span class="n">new_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;archive&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">file_path</span><span class="o">.</span><span class="n">name</span> <span class="c1"># (2)!</span>
     <span class="n">file_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Because you’ll mainly be working with the Path class of pathlib, importing it as <code>from pathlib import Path</code> saves you a few keystrokes in your code. This way, you can work with Path directly, rather than importing pathlib as a module and referring to <code>pathlib.Path</code>.</li>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Because you’ll mainly be working with the Path class of pathlib, importing it as <code>from pathlib import Path</code> saves you a few keystrokes in your code. This way, you can work with Path directly, rather than importing pathlib as a module and referring to <code>pathlib.Path</code>.</p>
+</li>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The archive's folder must exists to ensure <code>.replace()</code> method works.</p>
+</li>
 </ol>
 </li>
 </ul>
@@ -667,7 +708,7 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/Desktop/codei&#39;</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
 </ol>
 </div>
 <div class="tabbed-block">
@@ -676,7 +717,7 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/Users/gabrielbdornas/Desktop/codei&#39;</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
 </ol>
 </div>
 <div class="tabbed-block">
@@ -685,7 +726,7 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <span class="n">WindowsPath</span><span class="p">(</span><span class="s1">&#39;C:/Users/gabrielbdornas/Desktop/codei&#39;</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
 </ol>
 </div>
 </div>
@@ -698,7 +739,7 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/&#39;</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.</li>
 </ol>
 <h2 id="passing-in-a-string">Passing in a String<a class="headerlink" href="#passing-in-a-string" title="Permanent link">⚓︎</a></h2>
 <ul>
@@ -1005,15 +1046,100 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;.pdf&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;.py&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You can create more flexible file listings with the methods <code>.glob()</code> and <code>.rglob()</code>. For example, <code>Path.cwd().glob("*.txt")</code> returns all the files with a <code>.txt</code> suffix in the current directory.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You can create more flexible file listings with the methods <code>.glob()</code> and <code>.rglob()</code>. For example, <code>Path.cwd().glob("*.txt")</code> returns all the files with a <code>.txt</code> suffix in the current directory. If you want to recursively find all the files in both the directory and its subdirectories, then you can use <code>.rglob()</code>.</li>
 </ol>
+</li>
+</ul>
+<h3 id="displaying-a-directory-tree">Displaying a Directory Tree<a class="headerlink" href="#displaying-a-directory-tree" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>In this example, you define a function named <code>tree()</code>, which will print a visual tree representing the file hierarchy, rooted at a given directory. This is useful when, for example, you want to peek into the subdirectories of a project.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># display_dir_tree.py</span>
+
+<span class="k">def</span> <span class="nf">tree</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;+ </span><span class="si">{</span><span class="n">directory</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">directory</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)):</span>
+        <span class="n">depth</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span> <span class="c1"># (1)!</span>
+        <span class="n">spacer</span> <span class="o">=</span> <span class="s2">&quot;    &quot;</span> <span class="o">*</span> <span class="n">depth</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">spacer</span><span class="si">}</span><span class="s2">+ </span><span class="si">{</span><span class="n">path</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Note that you need to know how far away from the root directory a file is located. To do this, you first use <code>.relative_to()</code> to represent a path relative to the root directory. Then, you use the <code>.parts</code> property to count the number of directories in the representation.</p>
+</li>
+<li>
+<p>When run, this function creates a visual tree like the following:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">display_dir_tree</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tree</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">())</span>
+<span class="o">+</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">gabrielbdornas</span><span class="o">/</span><span class="n">codei</span>
+    <span class="o">+</span> <span class="n">directory_1</span>
+        <span class="o">+</span> <span class="n">file_a</span><span class="o">.</span><span class="n">md</span>
+    <span class="o">+</span> <span class="n">directory_2</span>
+        <span class="o">+</span> <span class="n">file_a</span><span class="o">.</span><span class="n">md</span>
+        <span class="o">+</span> <span class="n">file_b</span><span class="o">.</span><span class="n">pdf</span>
+        <span class="o">+</span> <span class="n">file_c</span><span class="o">.</span><span class="n">py</span>
+    <span class="o">+</span> <span class="n">file_1</span><span class="o">.</span><span class="n">txt</span>
+    <span class="o">+</span> <span class="n">file_2</span><span class="o">.</span><span class="n">txt</span>
+</code></pre></div>
+<h3 id="finding-the-most-recently-modified-file">Finding the Most Recently Modified File<a class="headerlink" href="#finding-the-most-recently-modified-file" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>The <code>.iterdir()</code>, <code>.glob()</code>, and <code>.rglob()</code> methods are great fits for generator expressions and list comprehensions.To find the most recently modified file in a directory, you can use the <code>.stat()</code> method to get information about the underlying files. For instance, <code>.stat().st_mtime</code> gives the time of last modification of a file:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">directory</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">time</span><span class="p">,</span> <span class="n">file_path</span> <span class="o">=</span> <span class="nb">max</span><span class="p">((</span><span class="n">f</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">directory</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">file_path</span><span class="p">)</span>
+<span class="mi">2024</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">18</span> <span class="mi">11</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mf">56.977817</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">gabrielbdornas</span><span class="o">/</span><span class="n">codei</span><span class="o">/</span><span class="n">test001</span><span class="o">.</span><span class="n">txt</span>
+</code></pre></div>
+<h3 id="creating-a-unique-filename">Creating a Unique Filename<a class="headerlink" href="#creating-a-unique-filename" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>In the last example, you’ll construct a unique numbered filename based on a template string. This can be handy when you don’t want to overwrite an existing file if it already exists:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># unique_path.py</span>
+
+<span class="k">def</span> <span class="nf">unique_path</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">name_pattern</span><span class="p">):</span> <span class="c1"># (1)!</span>
+  <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">directory</span> <span class="o">/</span> <span class="n">name_pattern</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+      <span class="k">return</span> <span class="n">path</span>
+</code></pre></div>
+<ol>
+<li>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> In <code>unique_path()</code>, you specify a pattern for the filename, with room for a counter. Then, you check the existence of the file path created by joining a directory and the filename, including a value for the counter. If it already exists, then you increase the counter and try again.</p>
+</li>
+<li>
+<p>Now you can use the script above to get unique filenames:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">unique_path</span> <span class="kn">import</span> <span class="n">unique_path</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;test</span><span class="si">{:03d}</span><span class="s2">.txt&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">unique_path</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span> <span class="n">template</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s2">&quot;/home/gabrielbdornas/codei/test003.txt&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> If the directory already contains the files <code>test001.txt</code> and <code>test002.txt</code>, then the above code will set path to <code>test003.txt</code>.</li>
+</ol>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>
+<p>Python’s pathlib module provides a modern and Pythonic way of working with file paths, making code more readable and maintainable. With pathlib, you can represent file paths with dedicated Path objects instead of plain strings<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+</li>
+<li>
+<p>The pathlib module makes dealing with file paths convenient by providing helpful methods and properties. Peculiarities of the different systems are hidden by the Path object, which makes your code more consistent across operating systems.</p>
 </li>
 </ul>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>In general, you should try to use Path objects as much as possible in your code to take advantage of their benefits, but converting them to strings can be necessary in certain contexts. <strong>Some libraries and APIs still expect you to pass file paths as strings, so you may need to convert a Path object to a string before passing it to certain functions</strong>. You'll see that, on Windows, although you enter paths with backslashes, pathlib represents them with the forward slash (/) as the path separator. This representation is named POSIX style. POSIX stands for <a href="https://en.wikipedia.org/wiki/POSIX">Portable Operating System Interface</a>, which is a standard for maintaining the compability between operating systems.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>In general, you should try to use Path objects as much as possible in your code to take advantage of their benefits, but converting them to strings can be necessary in certain contexts. <strong>Some libraries and APIs still expect you to pass file paths as strings, so you may need to convert a Path object to a string before passing it to certain functions</strong>. You'll see that, on Windows, although you enter paths with backslashes, pathlib represents them with the forward slash (/) as the path separator. This representation is named POSIX style. POSIX stands for <a href="https://en.wikipedia.org/wiki/POSIX">Portable Operating System Interface</a>, which is a standard for maintaining the compability between operating systems.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
 <p>When using these methods, Python overwrites any existing files on the same path without giving you any notice. <strong>That means you could erase all your hard work with a single keystroke</strong>! As always, when you write files with Python, you should be cautious of what your code is doing. The same is true when you’re renaming files.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
@@ -1045,7 +1171,7 @@ Let's understand how it works with the help of the <a href="https://realpython.c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 13, 2024 20:51:15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 27, 2024 12:33:40</span>
   </span>
 
     
@@ -1176,7 +1302,7 @@ Let's understand how it works with the help of the <a href="https://realpython.c
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
