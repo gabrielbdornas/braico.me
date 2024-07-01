@@ -19,12 +19,12 @@ This content is designed to take you from absolute beginner to Python pro, guidi
 Get ready to join the thriving Python community, let's get started!
 
 
-## Instalations
+## Installations
 
-- If you are using linux or mac it may be installed. Open your terminal and run `python --version`.
-- If you are in Windows download it from [Python downloads page](https://www.python.org/downloads/).
-- Download a text editor as [vs code](https://code.visualstudio.com/download) or [sublime text](https://www.sublimetext.com/3)
-- If you are in Window download [git for windows](https://git-scm.com/download/win) as we'll need a terminal to run our programs.
+- If you are using Linux or Mac, it may be installed. Open your terminal and run `python --version`.
+- If you are on Windows, download it from the [Python downloads page](https://www.python.org/downloads/).
+- Download a text editor as [VS code](https://code.visualstudio.com/download) or [sublime text](https://www.sublimetext.com/3)
+- If you are on Window, download [git for windows](https://git-scm.com/download/win) as we'll need a terminal to run our programs.
 
 ## Your first Python program
 
@@ -49,10 +49,10 @@ Get ready to join the thriving Python community, let's get started!
 - String multiplication:
 
     ```python
-    print('*' * 10) # (1)!
+    print('#' * 10) # (1)!
     ```
 
-    1. :man_raising_hand: The `'*' * 10` is an expression, or a piece of code that produces a value. Python first evaluate the `'*' * 10` code and than it prints its result (`**********`).
+    1. :man_raising_hand: The `'#' * 10` is an expression, or a piece of code, that produces a value. Python first evaluates the `'#' * 10` code, and then it prints its result (`##########`).
 
 ??? question "What other shapes could we draw using string multiplication?"
 
@@ -70,7 +70,7 @@ Get ready to join the thriving Python community, let's get started!
     print('*' * 9)
     ```
 
-    - Upside down pyramid [^1]:
+    - Upside-down pyramid [^1]:
 
     ```python
     print('*' * 9)
@@ -85,8 +85,10 @@ Get ready to join the thriving Python community, let's get started!
     ```
 
     ```python
-    # Your turn!!
+    # Your turn!!! (1)
     ```
+
+    1. :man_raising_hand: Comments in Python are created with the `#` character. Everything after the `#` character won't be executed by the Python interpreter.
 
 ## Variables
 
@@ -109,6 +111,7 @@ Get ready to join the thriving Python community, let's get started!
         price = 20
         print(price)
         rating = 4.6 # (2)!
+        rating = 7.9
         print(rating) # (3)!
         ```
 
@@ -116,16 +119,18 @@ Get ready to join the thriving Python community, let's get started!
         2. :man_raising_hand: Here, `4.6`  is a float (`float`) or a number with a decimal point.
         3. :man_raising_hand: Remember that the program is executed line by line.
 
-    - Strings and booleans variables:
+    - String and boolean variables:
 
         ```python
         name = 'Gabriel Braico Dornas'
+        name = 'Gabriel'
         print(name)
         is_approved = True # (1)!
+        is_approved = False
         print(is_approved)
         ```
 
-        1. :man_raising_hand: Here, `is_approved` is a boolean or as we say yes (`True`) and no (`False`). **Note that python is a case-sensitive language**.
+        1. :man_raising_hand: Here, `is_approved` is a boolean or, as we say yes (`True`) and no (`False`). **Note that python is a case-sensitive language**.
 
     - Mix them:
 
@@ -145,7 +150,7 @@ Get ready to join the thriving Python community, let's get started!
 
 ??? question "Define variables to our new hospital program"
 
-    - We check in a patient named John Smith. He's 20 years old and is a new patient. Define a variable to store the patient name, age and wheter it is a new patient or not.
+    - We checked in a patient named John Smith. He's 20 years old and is a new patient. Define a variable to store the patient name, age and whether it is a new patient or not.
 
     ??? "Give it a try before see my solution."
 
@@ -166,7 +171,7 @@ Get ready to join the thriving Python community, let's get started!
     input('What is your name? ') # (1)!
     ```
 
-    1. :man_raising_hand: Both the `print()` and the `input()` are functions built into Python. Think functions as the buttons in the remote control of your TV. The control's buttons are just like functions/operations that you can use over and over again. Function's parenthesis indicates that we are **calling** that function, or pressing a button on a remote control.
+    1. :man_raising_hand: Both the `print()` and the `input()` are functions built into Python. Think of functions as the buttons on the remote control of your TV. The control's buttons are just like functions/operations that you can use over and over again. Function's parenthesis indicates that we are **calling** that function, or pressing a button on a remote control.
 
 - Printing a nice message to our user:
 
@@ -190,9 +195,9 @@ Get ready to join the thriving Python community, let's get started!
         print(name + ' likes ' + color) # (1)!
         ```
 
-        1. :man_raising_hand: As you can see, `print(name, 'likes', color)` will work as well. Type `help(print)` in [Python interpreter](https://docs.python.org/3/tutorial/interpreter.html) to understand why we don't need to use spaces in the "likes" `string` whith this approach.
+        1. :man_raising_hand: As you can see, `print(name, 'likes', color)` will work as well. Type `help(print)` in [Python interpreter](https://docs.python.org/3/tutorial/interpreter.html) to understand why we don't need to use spaces in the "likes" `string` with this approach.
 
-## Type convertion
+## Type conversion
 
 - Calculate the user's age:
 
@@ -202,7 +207,7 @@ Get ready to join the thriving Python community, let's get started!
     print(age) # (1)!
     ```
 
-    1. :man_raising_hand: Never be afraid to the error messages. They tend to be really useful. Just read it. Then, try to figure it out what's going on.
+    1. :man_raising_hand: Be never afraid to error messages. They tend to be really useful. Just read it. Then, try to figure it out what's going on.
 
 - Refactoring the code to fix the error:
 
@@ -215,19 +220,19 @@ Get ready to join the thriving Python community, let's get started!
     print(age)
     ```
 
-    1. :man_raising_hand: The `input()` functions always returns a `str`, even if the user type a number.
+    1. :man_raising_hand: The `input()` functions always returns a `str`, even if the user types a number.
 
-    2. :man_raising_hand: The `type()` function confirms that the type of the variable `birth_year` is `str`, which means that the expression `2024 - birth_year` was evaluate as `2024 - '1985'` in the last example.
+    2. :man_raising_hand: The `type()` function confirms that the type of the variable `birth_year` is `str`, which means that the expression `2024 - birth_year` was evaluated as `2024 - '1985'` in the last example.
 
-    3. :man_raising_hand: The `int()` function converts the variable from `str` to `int`. The `float()`, `bool()` and `str()` functions are examples of other convertion type functions. Try them out!
+    3. :man_raising_hand: The `int()` function converts the variable from `str` to `int`. The `float()`, `bool()` and `str()` functions are examples of other conversion type functions. Try them out!
 
     4. :man_raising_hand: The `type()` function confirms that the type of the variable `birth_year`, now, is `int`.
 
-    5. :man_raising_hand: The expression `2024 - birth_year`, now, are going to be evaluate as `2024 - 1985`.
+    5. :man_raising_hand: The expression `2024 - birth_year`, now, will be evaluated as `2024 - 1985`.
 
 ??? question "What is your user's weight in kilograms?"
 
-    - As the user their weight in pounds, convert it to kilograms and print on the terminal.
+    - Ask the user their weight in pounds, convert it to kilograms and print on the terminal.
 
     ??? "Give it a try before see my solution."
 
@@ -237,9 +242,9 @@ Get ready to join the thriving Python community, let's get started!
         print(weight_kg) # (3)!
         ```
 
-        1. :man_raising_hand: As you can see, `int(input())` will work as well. First the Python interpreter will evaluate the expression inside the `input()`, then convert it to `int` using the `int()` function.
+        1. :man_raising_hand: As you can see, `int(input())` will work as well. First, the Python interpreter will evaluate the expression inside the `input()`, then convert it to `int` using the `int()` function.
 
-        2. :man_raising_hand: The `0.45` number is an example of the `float` data type or a number with a decimal point.
+        2. :man_raising_hand: The `0.45` number is an example of the `float` data type, or a number with a decimal point.
 
         2. :man_raising_hand: What if we use the `print('Your weight in kilograms is ' + weight_kg)` expression?
 
