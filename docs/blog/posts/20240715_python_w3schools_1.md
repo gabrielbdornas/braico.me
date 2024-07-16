@@ -14,7 +14,7 @@ Junte-se a nós em uma jornada imersiva pelo universo da programação Python! N
 
 <!-- more -->
 
-![type:video](https://www.youtube.com/embed/2GMy8TcuQ6A)
+![type:video](https://www.youtube.com/embed/duci2JOnFbw)
 
 ## O que foi abordado
 
