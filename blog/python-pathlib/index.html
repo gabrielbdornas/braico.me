@@ -10,6 +10,8 @@
       
       
       
+        <link rel="next" href="../python-18-horas---w3schools-1/">
+      
       
       <link rel="icon" href="../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
@@ -649,7 +651,7 @@
   
 
 
-<h1 id="python-pathlib">Python pathlib<a class="headerlink" href="#python-pathlib" title="Permanent link">⚓︎</a></h1>
+<div><h1 id="python-pathlib">Python pathlib<a class="headerlink" href="#python-pathlib" title="Permanent link">⚓︎</a></h1>
 <p>Working with files and interacting with the file system are common tasks for Python developers.
 That’s where pathlib comes in.
 Let's understand how it works with the help of the <a href="https://realpython.com/python-pathlib/">Python's pathlib Module: Taming the File System</a> post.</p>
@@ -672,16 +674,16 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <p>As an initial example of pathlib usage, the following code block moves files into a subfolder:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span> <span class="c1"># (1)!</span>
 
-<span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
-    <span class="n">new_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;archive&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">file_path</span><span class="o">.</span><span class="n">name</span> <span class="c1"># (2)!</span>
+<span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"*.txt"</span><span class="p">):</span>
+    <span class="n">new_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"archive"</span><span class="p">)</span> <span class="o">/</span> <span class="n">file_path</span><span class="o">.</span><span class="n">name</span> <span class="c1"># (2)!</span>
     <span class="n">file_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span>
 </code></pre></div>
 <ol>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Because you’ll mainly be working with the Path class of pathlib, importing it as <code>from pathlib import Path</code> saves you a few keystrokes in your code. This way, you can work with Path directly, rather than importing pathlib as a module and referring to <code>pathlib.Path</code>.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> Because you’ll mainly be working with the Path class of pathlib, importing it as <code>from pathlib import Path</code> saves you a few keystrokes in your code. This way, you can work with Path directly, rather than importing pathlib as a module and referring to <code>pathlib.Path</code>.</p>
 </li>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The archive's folder must exists to ensure <code>.replace()</code> method works.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> The archive's folder must exists to ensure <code>.replace()</code> method works.</p>
 </li>
 </ol>
 </li>
@@ -698,35 +700,35 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 </ul>
 </div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The <strong>current working directory</strong> is the directory in the file system that the current process is operating in. Using the home directory as a starting point, you can specify paths that’ll <strong>work on different machines, independent of any specific usernames</strong>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> The <strong>current working directory</strong> is the directory in the file system that the current process is operating in. Using the home directory as a starting point, you can specify paths that’ll <strong>work on different machines, independent of any specific usernames</strong>.</li>
 </ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="c1"># (1)!</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/Desktop/codei&#39;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/Desktop/codei'</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
 </ol>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="c1"># (1)!</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/Users/gabrielbdornas/Desktop/codei&#39;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/Users/gabrielbdornas/Desktop/codei'</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
 </ol>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="c1"># (1)!</span>
-<span class="n">WindowsPath</span><span class="p">(</span><span class="s1">&#39;C:/Users/gabrielbdornas/Desktop/codei&#39;</span><span class="p">)</span>
+<span class="n">WindowsPath</span><span class="p">(</span><span class="s1">'C:/Users/gabrielbdornas/Desktop/codei'</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> With <code>Path.cwd()</code>and <code>Path.home()</code>, you can conveniently get a starting point for your Python scripts. In cases where you need to spell paths out or reference a subdirectory structure, you can instantiate Path with a string.</li>
 </ol>
 </div>
 </div>
@@ -736,30 +738,30 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 </ul>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="c1"># (1)!</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/&#39;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/'</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> Using the home directory as a starting point, you can specify paths that’ll work independent of any specific usernames.</li>
 </ol>
 <h2 id="passing-in-a-string">Passing in a String<a class="headerlink" href="#passing-in-a-string" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>Instead of starting in your user’s home directory or your current working directory, you can point to a directory or file directly by passing its string representation into Path:</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Linux</label><label for="__tabbed_2_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/home/gabrielbdornas/Desktop/codei/file.txt&quot;</span><span class="p">)</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/Desktop/codei/file.txt&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"/home/gabrielbdornas/Desktop/codei/file.txt"</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/Desktop/codei/file.txt'</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\gabrielbdornas\codei\file.txt&quot;</span><span class="p">)</span>
-<span class="n">WindowsPath</span><span class="p">(</span><span class="s1">&#39;C:/Users/gabrielbdornas/Desktop/codei/file.txt&#39;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s2">"C:\Users\gabrielbdornas\codei\file.txt"</span><span class="p">)</span>
+<span class="n">WindowsPath</span><span class="p">(</span><span class="s1">'C:/Users/gabrielbdornas/Desktop/codei/file.txt'</span><span class="p">)</span> <span class="c1"># (1)!</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> On Windows, the <strong>path separator</strong> is a backslash (). However, in many contexts, the backslash is also used as an escape character to represent non-printable characters. To avoid problems, use raw string literals to represent Windows paths like <code>r"C:\Users"</code>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> On Windows, the <strong>path separator</strong> is a backslash (). However, in many contexts, the backslash is also used as an escape character to represent non-printable characters. To avoid problems, use raw string literals to represent Windows paths like <code>r"C:\Users"</code>.</li>
 </ol>
 </div>
 </div>
@@ -771,10 +773,10 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You can find me here: </span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"You can find me here: </span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span> <span class="c1"># (1)!</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The <code>__file__</code> attribute contains the path to the file that Python is currently importing or executing. You can pass in <code>__file__</code> to Path when you need to work with the path to the module itself. For example, maybe you want to get the parent directory with <code>.parent</code>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> The <code>__file__</code> attribute contains the path to the file that Python is currently importing or executing. You can pass in <code>__file__</code> to Path when you need to work with the path to the module itself. For example, maybe you want to get the parent directory with <code>.parent</code>.</li>
 </ol>
 </details>
 <h2 id="joining-paths">Joining Paths<a class="headerlink" href="#joining-paths" title="Permanent link">⚓︎</a></h2>
@@ -783,12 +785,12 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
-<span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
-    <span class="n">new_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;archive&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">file_path</span><span class="o">.</span><span class="n">name</span> <span class="c1"># (1)!</span>
+<span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"*.txt"</span><span class="p">):</span>
+    <span class="n">new_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"archive"</span><span class="p">)</span> <span class="o">/</span> <span class="n">file_path</span><span class="o">.</span><span class="n">name</span> <span class="c1"># (1)!</span>
     <span class="n">file_path</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The forward slash operator can join several paths or a mix of paths and strings as long as you include one Path object. <strong>You use a forward slash regardless of your platform’s actual path separator</strong>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> The forward slash operator can join several paths or a mix of paths and strings as long as you include one Path object. <strong>You use a forward slash regardless of your platform’s actual path separator</strong>.</li>
 </ol>
 <details class="note">
 <summary>The <code>.joinpath()</code> method</summary>
@@ -796,8 +798,8 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <li>If you don’t like the special slash notation, then you can do the same operation with the <code>.joinpath()</code> method:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;scripts&quot;</span><span class="p">,</span> <span class="s2">&quot;test.py&quot;</span><span class="p">)</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/python/scripts/test.py&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">"python"</span><span class="p">,</span> <span class="s2">"scripts"</span><span class="p">,</span> <span class="s2">"test.py"</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/python/scripts/test.py'</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <h2 id="file-system-operations-with-paths">File System Operations With Paths<a class="headerlink" href="#file-system-operations-with-paths" title="Permanent link">⚓︎</a></h2>
@@ -814,28 +816,28 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">path</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s2">&quot;/home/gabrielbdornas/codei/test.md&quot;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s2">"/home/gabrielbdornas/codei/test.md"</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">name</span>
-<span class="s1">&#39;test.md&#39;</span>
+<span class="s1">'test.md'</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span>
-<span class="s1">&#39;test&#39;</span>
+<span class="s1">'test'</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">suffix</span>
-<span class="s1">&#39;.md&#39;</span>
+<span class="s1">'.md'</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">anchor</span>
-<span class="s1">&#39;/&#39;</span>
+<span class="s1">'/'</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span> <span class="c1"># (1)!</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s2">&quot;/home/gabrielbdornas/codei&quot;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s2">"/home/gabrielbdornas/codei"</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas&#39;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas'</span><span class="p">)</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Note that <code>.parent</code> returns a new Path object, whereas the other properties return strings. This means, for instance, that you can chain <code>.parent</code> in the last example or even combine it with the slash operator to create completely new paths.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> Note that <code>.parent</code> returns a new Path object, whereas the other properties return strings. This means, for instance, that you can chain <code>.parent</code> in the last example or even combine it with the slash operator to create completely new paths.</li>
 </ol>
 </li>
 </ul>
@@ -868,14 +870,14 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
-<span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;shopping_list.md&quot;</span>
-<span class="k">with</span> <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">md_file</span><span class="p">:</span> <span class="c1"># (1)!</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="o">/</span> <span class="s2">"shopping_list.md"</span>
+<span class="k">with</span> <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">"r"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">md_file</span><span class="p">:</span> <span class="c1"># (1)!</span>
     <span class="n">content</span> <span class="o">=</span> <span class="n">md_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">groceries</span><span class="p">))</span>
+    <span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"*"</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">groceries</span><span class="p">))</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> In fact, <code>Path.open()</code> is calling the built-in <code>open()</code> function behind the scenes. That’s why you can use parameters like mode and encoding with <code>Path.open()</code>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> In fact, <code>Path.open()</code> is calling the built-in <code>open()</code> function behind the scenes. That’s why you can use parameters like mode and encoding with <code>Path.open()</code>.</li>
 </ol>
 </li>
 <li>
@@ -893,13 +895,13 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
-<span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;shopping_list.md&quot;</span> <span class="c1"># (1)!</span>
-<span class="n">content</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
-<span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">groceries</span><span class="p">))</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="o">/</span> <span class="s2">"shopping_list.md"</span> <span class="c1"># (1)!</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+<span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"*"</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">groceries</span><span class="p">))</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You can also specify paths directly as in <code>Path("shopping_list.md")</code>, <strong>in which case they’re interpreted relative to the current working directory</strong>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> You can also specify paths directly as in <code>Path("shopping_list.md")</code>, <strong>in which case they’re interpreted relative to the current working directory</strong>.</li>
 </ol>
 </li>
 <li>
@@ -908,10 +910,10 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
-<span class="n">content</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;shopping_list.md&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
-<span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)]</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"shopping_list.md"</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+<span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"*"</span><span class="p">)]</span>
 
-<span class="n">Path</span><span class="p">(</span><span class="s2">&quot;plain_list.md&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">groceries</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">Path</span><span class="p">(</span><span class="s2">"plain_list.md"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">groceries</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
 </code></pre></div>
 </li>
 </ul>
@@ -920,38 +922,38 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <li>
 <p>When you want to rename files, you can use <code>.with_stem()</code>, <code>.with_suffix()</code>, or <code>.with_name()</code>. They return the original path but with the filename, the file extension, or both replaced. You can use all of them in combination with <code>.replace()</code>, example:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.txt&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/codei/hello.txt'</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.txt&#39;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/codei/hello.txt'</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">md_path</span> <span class="o">=</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s1">&#39;.md&#39;</span><span class="p">)</span> <span class="c1"># (1)!</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.md&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">md_path</span> <span class="o">=</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s1">'.md'</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/codei/hello.md'</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">md_path</span><span class="p">)</span> <span class="c1"># (2)!</span>
 </code></pre></div>
 <ol>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Using <code>.with_suffix()</code> returns a new path.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> Using <code>.with_suffix()</code> returns a new path.</p>
 </li>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> To actually rename the file, you use <code>.replace()</code>. This moves <code>txt_path</code> to <code>md_path</code> and renames it when saving.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> To actually rename the file, you use <code>.replace()</code>. This moves <code>txt_path</code> to <code>md_path</code> and renames it when saving.</p>
 </li>
 </ol>
 </li>
 <li>
 <p>If you want to change the complete filename, including the extension, then you can use <code>.with_name()</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.txt&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/codei/hello.txt'</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/hello.txt&#39;</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/codei/hello.txt'</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">md_path</span> <span class="o">=</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">with_name</span><span class="p">(</span><span class="s1">&#39;goodbye.md&#39;</span><span class="p">)</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/gabrielbdornas/codei/goodbye.md&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">md_path</span> <span class="o">=</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">with_name</span><span class="p">(</span><span class="s1">'goodbye.md'</span><span class="p">)</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s1">'/home/gabrielbdornas/codei/goodbye.md'</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">txt_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">md_path</span><span class="p">)</span> <span class="c1"># (1)!</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> It renames <code>hello.txt</code> to <code>goodbye.md</code>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> It renames <code>hello.txt</code> to <code>goodbye.md</code>.</li>
 </ol>
 </li>
 </ul>
@@ -960,13 +962,13 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <li>
 <p>Surprisingly, Path doesn’t have a method to copy files. But with the knowledge that you’ve gained about pathlib so far, you can create the same functionality with a few lines of code:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;shopping_list.md&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">destination</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">with_stem</span><span class="p">(</span><span class="s1">&#39;shopping_list_02&#39;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'shopping_list.md'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">destination</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">with_stem</span><span class="p">(</span><span class="s1">'shopping_list_02'</span><span class="p">)</span> <span class="c1"># (1)!</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">destination</span><span class="o">.</span><span class="n">write_bytes</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">read_bytes</span><span class="p">())</span> <span class="c1"># (2)!</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You’re using <code>.with_stem()</code> to create the new filename without changing the extension.</li>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> The actual copying takes place here, where you use <code>.read_bytes()</code> to read the content of source and then write this content to destination using <code>.write_bytes()</code>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> You’re using <code>.with_stem()</code> to create the new filename without changing the extension.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> The actual copying takes place here, where you use <code>.read_bytes()</code> to read the content of source and then write this content to destination using <code>.write_bytes()</code>.</li>
 </ol>
 </li>
 </ul>
@@ -978,8 +980,8 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <li>
 <p>To move a file, you can use <code>.replace()</code><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. To avoid possibly overwriting the destination path, you can test whether the destination exists before replacing:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;hello.py&#39;</span><span class="p">)</span>
-<span class="n">destination</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;goodbye.py&#39;</span><span class="p">)</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'hello.py'</span><span class="p">)</span>
+<span class="n">destination</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'goodbye.py'</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">destination</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
   <span class="n">source</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span>
@@ -989,23 +991,23 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <p>However, this does leave the door open for a possible <a href="https://en.wikipedia.org/wiki/Race_condition">race condition</a>. Another process may add a file at the destination path between the execution of the if statement and the <code>.replace()</code> method. If that’s a concern, then a safer way is to open the destination path for exclusive creation then explicitly copy the source data and delete the source file afterward:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
-<span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;hello.py&#39;</span><span class="p">)</span>
-<span class="n">destination</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;goodbye.py&#39;</span><span class="p">)</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'hello.py'</span><span class="p">)</span>
+<span class="n">destination</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'goodbye.py'</span><span class="p">)</span>
 
 <span class="k">try</span><span class="p">:</span>
-  <span class="k">with</span> <span class="n">destination</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;xb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+  <span class="k">with</span> <span class="n">destination</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">'xb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">read_bytes</span><span class="p">())</span>
 <span class="k">except</span> <span class="ne">FileExistsError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;File </span><span class="si">{</span><span class="n">destination</span><span class="si">}</span><span class="s1"> existis already&#39;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'File </span><span class="si">{</span><span class="n">destination</span><span class="si">}</span><span class="s1"> existis already'</span><span class="p">)</span> <span class="c1"># (1)!</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">source</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span> <span class="c1"># (2)!</span>
 </code></pre></div>
 <ol>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> If destination already exists, it catches a <code>FileExistsError</code> and prints a warning message.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> If destination already exists, it catches a <code>FileExistsError</code> and prints a warning message.</p>
 </li>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> To perform a move, you need to delete source with <code>.unlink()</code> after the copy is done. Using <code>else</code> ensures that the source file isn’t deleted if the copying fails.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> To perform a move, you need to delete source with <code>.unlink()</code> after the copy is done. Using <code>else</code> ensures that the source file isn’t deleted if the copying fails.</p>
 </li>
 </ol>
 </li>
@@ -1015,7 +1017,7 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <li>
 <p>To create an empty file with pathlib, you can use <code>.touch()</code>. This method is intended to update a file’s modification time, but you can use its side effect to create a new file:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;hello.py&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'hello.py'</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">filename</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
 <span class="kc">False</span>
 
@@ -1027,10 +1029,10 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 </code></pre></div>
 <ol>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You use <code>.exists()</code> both to verify that the file didn’t exist before and then to check that it was successfully created.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> You use <code>.exists()</code> both to verify that the file didn’t exist before and then to check that it was successfully created.</p>
 </li>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> If you use <code>.touch()</code> again, then it updates the file’s modification time. If you don’t want to modify files accidentally, then you can use the <code>exist_ok</code> parameter and set it to False as in <code>filename.touch(exist_ok=False)</code>.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> If you use <code>.touch()</code> again, then it updates the file’s modification time. If you don’t want to modify files accidentally, then you can use the <code>exist_ok</code> parameter and set it to False as in <code>filename.touch(exist_ok=False)</code>.</p>
 </li>
 </ol>
 </li>
@@ -1043,10 +1045,10 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">counter</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">suffix</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())</span> <span class="c1"># (1)!</span>
-<span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;.pdf&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;.py&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">Counter</span><span class="p">({</span><span class="s1">'.md'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'.txt'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">'.pdf'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'.py'</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> You can create more flexible file listings with the methods <code>.glob()</code> and <code>.rglob()</code>. For example, <code>Path.cwd().glob("*.txt")</code> returns all the files with a <code>.txt</code> suffix in the current directory. If you want to recursively find all the files in both the directory and its subdirectories, then you can use <code>.rglob()</code>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> You can create more flexible file listings with the methods <code>.glob()</code> and <code>.rglob()</code>. For example, <code>Path.cwd().glob("*.txt")</code> returns all the files with a <code>.txt</code> suffix in the current directory. If you want to recursively find all the files in both the directory and its subdirectories, then you can use <code>.rglob()</code>.</li>
 </ol>
 </li>
 </ul>
@@ -1057,15 +1059,15 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 <div class="highlight"><pre><span></span><code><span class="c1"># display_dir_tree.py</span>
 
 <span class="k">def</span> <span class="nf">tree</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;+ </span><span class="si">{</span><span class="n">directory</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">directory</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"+ </span><span class="si">{</span><span class="n">directory</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">directory</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">"*"</span><span class="p">)):</span>
         <span class="n">depth</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span> <span class="c1"># (1)!</span>
-        <span class="n">spacer</span> <span class="o">=</span> <span class="s2">&quot;    &quot;</span> <span class="o">*</span> <span class="n">depth</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">spacer</span><span class="si">}</span><span class="s2">+ </span><span class="si">{</span><span class="n">path</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">spacer</span> <span class="o">=</span> <span class="s2">"    "</span> <span class="o">*</span> <span class="n">depth</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">spacer</span><span class="si">}</span><span class="s2">+ </span><span class="si">{</span><span class="n">path</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
 <ol>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Note that you need to know how far away from the root directory a file is located. To do this, you first use <code>.relative_to()</code> to represent a path relative to the root directory. Then, you use the <code>.parts</code> property to count the number of directories in the representation.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> Note that you need to know how far away from the root directory a file is located. To do this, you first use <code>.relative_to()</code> to represent a path relative to the root directory. Then, you use the <code>.parts</code> property to count the number of directories in the representation.</p>
 </li>
 <li>
 <p>When run, this function creates a visual tree like the following:</p>
@@ -1111,7 +1113,7 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 </code></pre></div>
 <ol>
 <li>
-<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> In <code>unique_path()</code>, you specify a pattern for the filename, with room for a counter. Then, you check the existence of the file path created by joining a directory and the filename, including a value for the counter. If it already exists, then you increase the counter and try again.</p>
+<p><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> In <code>unique_path()</code>, you specify a pattern for the filename, with room for a counter. Then, you check the existence of the file path created by joining a directory and the filename, including a value for the counter. If it already exists, then you increase the counter and try again.</p>
 </li>
 <li>
 <p>Now you can use the script above to get unique filenames:</p>
@@ -1119,12 +1121,12 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 </ol>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">unique_path</span> <span class="kn">import</span> <span class="n">unique_path</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;test</span><span class="si">{:03d}</span><span class="s2">.txt&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">template</span> <span class="o">=</span> <span class="s2">"test</span><span class="si">{:03d}</span><span class="s2">.txt"</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">unique_path</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span> <span class="n">template</span><span class="p">)</span>
-<span class="n">PosixPath</span><span class="p">(</span><span class="s2">&quot;/home/gabrielbdornas/codei/test003.txt&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<span class="n">PosixPath</span><span class="p">(</span><span class="s2">"/home/gabrielbdornas/codei/test003.txt"</span><span class="p">)</span> <span class="c1"># (1)!</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> If the directory already contains the files <code>test001.txt</code> and <code>test002.txt</code>, then the above code will set path to <code>test003.txt</code>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> If the directory already contains the files <code>test001.txt</code> and <code>test002.txt</code>, then the above code will set path to <code>test003.txt</code>.</li>
 </ol>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
 <ul>
@@ -1136,19 +1138,19 @@ Let's understand how it works with the help of the <a href="https://realpython.c
 </li>
 </ul>
 <div class="footnote">
-<hr />
+<hr>
 <ol>
 <li id="fn:1">
-<p>In general, you should try to use Path objects as much as possible in your code to take advantage of their benefits, but converting them to strings can be necessary in certain contexts. <strong>Some libraries and APIs still expect you to pass file paths as strings, so you may need to convert a Path object to a string before passing it to certain functions</strong>. You'll see that, on Windows, although you enter paths with backslashes, pathlib represents them with the forward slash (/) as the path separator. This representation is named POSIX style. POSIX stands for <a href="https://en.wikipedia.org/wiki/POSIX">Portable Operating System Interface</a>, which is a standard for maintaining the compability between operating systems.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>In general, you should try to use Path objects as much as possible in your code to take advantage of their benefits, but converting them to strings can be necessary in certain contexts. <strong>Some libraries and APIs still expect you to pass file paths as strings, so you may need to convert a Path object to a string before passing it to certain functions</strong>. You'll see that, on Windows, although you enter paths with backslashes, pathlib represents them with the forward slash (/) as the path separator. This representation is named POSIX style. POSIX stands for <a href="https://en.wikipedia.org/wiki/POSIX">Portable Operating System Interface</a>, which is a standard for maintaining the compability between operating systems. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
-<p>When using these methods, Python overwrites any existing files on the same path without giving you any notice. <strong>That means you could erase all your hard work with a single keystroke</strong>! As always, when you write files with Python, you should be cautious of what your code is doing. The same is true when you’re renaming files.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>When using these methods, Python overwrites any existing files on the same path without giving you any notice. <strong>That means you could erase all your hard work with a single keystroke</strong>! As always, when you write files with Python, you should be cautious of what your code is doing. The same is true when you’re renaming files. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:3">
-<p>A good way to protect yoursef of this kind of troble is using version control system while writing your codes.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>A good way to protect yoursef of this kind of troble is using version control system while writing your codes. <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 </ol>
-</div>
+</div></div>
 
 
 
