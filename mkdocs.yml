@@ -98,6 +98,10 @@ plugins:
       archive: false
       categories_toc: true
       post_excerpt: required
+  - mkdocs-video:
+      video_muted: True
+      video_controls: True
+      video_autoplay: False
 
 watch:
   - includes
