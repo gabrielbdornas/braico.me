@@ -396,27 +396,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#o-que-foi-abordado" class="md-nav__link">
+  <a href="#what-was-covered" class="md-nav__link">
     <span class="md-ellipsis">
-      O que foi abordado
+      What was covered
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dicas-extras" class="md-nav__link">
+  <a href="#extra-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Dicas extras
+      Extra Tips
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercicios" class="md-nav__link">
+  <a href="#exercises" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercícios
+      Exercises
     </span>
   </a>
   
@@ -547,117 +547,119 @@
 
 
 <div><h1 id="python-18-horas-w3schools-1">Python 18 Horas - W3schools #1<a class="headerlink" href="#python-18-horas-w3schools-1" title="Permanent link">⚓︎</a></h1>
-<p>Junte-se a nós em uma jornada imersiva pelo universo da programação Python! Nos Encontros Python 18Horas, guiados pelos materiais abrangentes do <a href="https://www.w3schools.com/python/default.asp">W3Schools</a>, desvendaremos os segredos dessa linguagem poderosa e versátil, desbravando seus fundamentos e funcionalidades passo a passo.</p>
+<p>Join us on an immersive journey through the universe of Python programming! In the Python 18Hours Meetings, guided by the comprehensive materials from <a href="https://www.w3schools.com/python/default.asp">W3Schools</a>, we will uncover the secrets of this powerful and versatile language, exploring its fundamentals and functionalities step by step.</p>
 <!-- more -->
 
 <p><div class="video-container"><iframe src="https://www.youtube.com/embed/duci2JOnFbw" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
-<h2 id="o-que-foi-abordado">O que foi abordado<a class="headerlink" href="#o-que-foi-abordado" title="Permanent link">⚓︎</a></h2>
+<h2 id="what-was-covered">What was covered<a class="headerlink" href="#what-was-covered" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li><strong>Introdução ao Python:</strong><ul>
-<li>Popularidade e aplicações diversas (web, análise de dados, automação etc.).</li>
-<li>Facilidade de aprendizado e sintaxe intuitiva.</li>
-<li>Comunidade grande e ativa para suporte.</li>
+<li>
+<p><strong>Introduction to Python:</strong></p>
+<ul>
+<li>Popularity and diverse applications (web, data analysis, automation, etc.).</li>
+<li>Ease of learning and intuitive syntax.</li>
+<li>Large and active community for support.</li>
 </ul>
 </li>
 <li>
-<p><strong>Instalação e uso básico:</strong></p>
+<p><strong>Installation and basic usage:</strong></p>
 <ul>
-<li>Recomendado utilização de ambiente virtual para isolar projetos</li>
+<li>It is recommended to use a virtual environment to isolate projects.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># criação ambiente virtual python</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># create python virtual environment</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
 
-<span class="c1"># ativação ambiente virtual linux/mac</span>
+<span class="c1"># activate virtual environment on linux/mac</span>
 <span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
 
-<span class="c1"># ativação ambiente virtual windows</span>
+<span class="c1"># activate virtual environment on windows</span>
 <span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="n">Scripts</span><span class="o">/</span><span class="n">activate</span>
 </code></pre></div>
 <ul>
-<li>Execução de scripts através do interpretador e arquivos <code>.py</code>.</li>
+<li>Running scripts through the interpreter and <code>.py</code> files.</li>
 </ul>
 </li>
 <li>
-<p><strong>Sintaxe e indentação:</strong></p>
+<p><strong>Syntax and indentation:</strong></p>
 <ul>
-<li>A importância da indentação para organização e legibilidade do código.</li>
+<li>The importance of indentation for code organization and readability.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">'Cinco é maior que 2!'</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">'Five is greater than 2!'</span><span class="p">)</span>
 </code></pre></div>
 <ul>
-<li>Erros de indentação e como identificá-los no editor e no interpretador.</li>
-<li>Boas práticas para formatação de código com tabs (4 espaços).</li>
+<li>Indentation errors and how to identify them in the editor and interpreter.</li>
+<li>Best practices for code formatting with tabs (4 spaces).</li>
 </ul>
 </li>
 <li>
-<p><strong>Variáveis:</strong></p>
+<p><strong>Variables:</strong></p>
 <ul>
-<li>Conceito e criação através da atribuição de valor.</li>
+<li>Concept and creation through value assignment.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">nome</span> <span class="o">=</span> <span class="s2">"Fulano de Tal"</span> <span class="c1"># str</span>
-<span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># int</span>
-<span class="n">valor</span> <span class="o">=</span> <span class="mf">4.56</span> <span class="c1"># float</span>
-<span class="n">cidade</span> <span class="o">=</span> <span class="s2">"Belo Horizonte"</span> <span class="c1"># str</span>
-<span class="n">acertei</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># bool</span>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">"John Doe"</span> <span class="c1"># str</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># int</span>
+<span class="n">value</span> <span class="o">=</span> <span class="mf">4.56</span> <span class="c1"># float</span>
+<span class="n">city</span> <span class="o">=</span> <span class="s2">"Belo Horizonte"</span> <span class="c1"># str</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># bool</span>
 </code></pre></div>
 <ul>
-<li>Armazenamento de dados para uso posterior no código.</li>
-<li>Diferenças entre variáveis e valores literais.</li>
-<li>Ausência de declaração formal de tipo de variável no Python.</li>
+<li>Storing data for later use in the code.</li>
+<li>Differences between variables and literal values.</li>
+<li>Absence of formal variable type declaration in Python.</li>
 </ul>
 </li>
 <li>
-<p><strong>Comentários:</strong></p>
+<p><strong>Comments:</strong></p>
 <ul>
-<li>Utilização de hashtags (#) para comentários e documentação do código.</li>
+<li>Using hashtags (#) for comments and code documentation.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># isto é um comentário</span>
-<span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># isto também é um comentário</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">'Cinco é maior que 2!'</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># this is a comment</span>
+<span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># this is also a comment</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">'Five is greater than 2!'</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 <span class="w">  </span><span class="sd">"""</span>
-<span class="sd">  Este é um comentário para dizer que</span>
-<span class="sd">  esta função soma dois números, a e b</span>
+<span class="sd">  This is a comment to indicate that</span>
+<span class="sd">  this function sums two numbers, a and b</span>
 <span class="sd">  """</span>
   <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">soma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
-<span class="c1"># comentário em várias linhas</span>
-<span class="c1"># print(soma(2, 3))</span>
-<span class="c1"># print(soma(2, 4))</span>
-<span class="c1"># print(soma(2, 5))</span>
+<span class="c1"># multi-line comment</span>
+<span class="c1"># print(sum(2, 3))</span>
+<span class="c1"># print(sum(2, 4))</span>
+<span class="c1"># print(sum(2, 5))</span>
 </code></pre></div>
 <ul>
-<li>Desativação de partes do código para testes e depuração.</li>
-<li>Atalhos para comentar e descomentar linhas e blocos no editor de texto.</li>
+<li>Disabling parts of the code for testing and debugging.</li>
+<li>Shortcuts to comment and uncomment lines and blocks in the text editor.</li>
 </ul>
 </li>
 </ul>
-<h2 id="dicas-extras">Dicas extras<a class="headerlink" href="#dicas-extras" title="Permanent link">⚓︎</a></h2>
+<h2 id="extra-tips">Extra Tips<a class="headerlink" href="#extra-tips" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li>Configure o editor de texto para comentar linhas e blocos de código facilmente.</li>
-<li>Configure o editor de texto para salvar automaticamente o arquivo trabalhado (alto-save).</li>
-<li>Utilize o ambiente virtual para cada projeto para isolar bibliotecas e evitar conflitos.</li>
-<li>Este resumo foi elaborado com base na transcrição do encontro e pode conter adaptações para melhor clareza e concisão. Recomendo assistir à gravação para obter uma compreensão mais aprofundada dos tópicos abordados.</li>
+<li>Configure the text editor to comment lines and blocks of code easily.</li>
+<li>Configure the text editor to automatically save the worked file (auto-save).</li>
+<li>Use the virtual environment for each project to isolate libraries and avoid conflicts.</li>
+<li>This summary was prepared based on the meeting transcript and may contain adaptations for better clarity and conciseness. I recommend watching the recording for a deeper understanding of the topics covered.</li>
 </ul>
-<h2 id="exercicios">Exercícios<a class="headerlink" href="#exercicios" title="Permanent link">⚓︎</a></h2>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">⚓︎</a></h2>
 <details class="question">
-<summary>Defina variáveis para um novo programa de gestão hospitalar</summary>
+<summary>Define variables for a new hospital management program</summary>
 <ul>
-<li>Um novo paciente chamado João deu entrada no hospital. Ele tem 20 anos e é um novo paciente deste hospital. Defina variáveis para armazenar o nome deste paciente, sua idade e se ele é um novo paciente da instituição. Mostre no sistema todas estas informações coletadas.</li>
+<li>A new patient named João was admitted to the hospital. He is 20 years old and is a new patient at this hospital. Define variables to store this patient's name, age, and whether he is a new patient at the institution. Display all this collected information in the system.</li>
 </ul>
 <details>
-<summary>Antes de olhar a resposta, tende fazer sozinho.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">nome</span> <span class="o">=</span> <span class="s1">'João'</span>
-<span class="n">idade</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">novo_paciente</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">idade</span><span class="p">,</span> <span class="n">novo_paciente</span><span class="p">)</span> <span class="c1"># (1)!</span>
+<summary>Before looking at the answer, try to do it yourself.</summary>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">'João'</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">new_patient</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">new_patient</span><span class="p">)</span> <span class="c1"># (1)!</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> Você pode passar mais de um valor para a função <code>print()</code>.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> You can pass more than one value to the <code>print()</code> function.</li>
 </ol>
 </details>
 </details>
@@ -694,7 +696,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 16, 2024 23:42:55</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 25, 2024 17:33:45</span>
   </span>
 
     
