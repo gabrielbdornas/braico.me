@@ -120,7 +120,7 @@ Join us on an immersive journey through the universe of Python programming! In t
 
         1. :man_raising_hand: You can pass more than one value to the `print()` function.
 
-## Referências
+## References
 
 - [W3schools Python HOME](https://www.w3schools.com/python/default.asp).
 - [W3schools Python Intro](https://www.w3schools.com/python/python_intro.asp).
