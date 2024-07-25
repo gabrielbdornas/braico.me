@@ -10,109 +10,115 @@ categories:
 
 # Python 18 Horas - W3schools #1
 
-Junte-se a nós em uma jornada imersiva pelo universo da programação Python! Nos Encontros Python 18Horas, guiados pelos materiais abrangentes do [W3Schools](https://www.w3schools.com/python/default.asp), desvendaremos os segredos dessa linguagem poderosa e versátil, desbravando seus fundamentos e funcionalidades passo a passo.
+Join us on an immersive journey through the universe of Python programming! In the Python 18Hours Meetings, guided by the comprehensive materials from [W3Schools](https://www.w3schools.com/python/default.asp), we will uncover the secrets of this powerful and versatile language, exploring its fundamentals and functionalities step by step.
 
 <!-- more -->
 
 ![type:video](https://www.youtube.com/embed/duci2JOnFbw)
 
-## O que foi abordado
+## What was covered
 
-* **Introdução ao Python:**
-    * Popularidade e aplicações diversas (web, análise de dados, automação etc.).
-    * Facilidade de aprendizado e sintaxe intuitiva.
-    * Comunidade grande e ativa para suporte.
-* **Instalação e uso básico:**
-    * Recomendado utilização de ambiente virtual para isolar projetos
+* **Introduction to Python:**
+
+    * Popularity and diverse applications (web, data analysis, automation, etc.).
+    * Ease of learning and intuitive syntax.
+    * Large and active community for support.
+
+* **Installation and basic usage:**
+
+    * It is recommended to use a virtual environment to isolate projects.
 
     ```python
-    # criação ambiente virtual python
+    # create python virtual environment
     python -m venv venv
 
-    # ativação ambiente virtual linux/mac
+    # activate virtual environment on linux/mac
     source venv/bin/activate
 
-    # ativação ambiente virtual windows
+    # activate virtual environment on windows
     source venv/Scripts/activate
     ```
 
-    * Execução de scripts através do interpretador e arquivos `.py`.
+    * Running scripts through the interpreter and `.py` files.
 
-* **Sintaxe e indentação:**
-    * A importância da indentação para organização e legibilidade do código.
+* **Syntax and indentation:**
+
+    * The importance of indentation for code organization and readability.
 
     ```python
     if 5 > 2:
-      print('Cinco é maior que 2!')
+      print('Five is greater than 2!')
     ```
 
-    * Erros de indentação e como identificá-los no editor e no interpretador.
-    * Boas práticas para formatação de código com tabs (4 espaços).
+    * Indentation errors and how to identify them in the editor and interpreter.
+    * Best practices for code formatting with tabs (4 spaces).
 
-* **Variáveis:**
-    * Conceito e criação através da atribuição de valor.
+* **Variables:**
+
+    * Concept and creation through value assignment.
 
     ```python
-    nome = "Fulano de Tal" # str
-    idade = 30 # int
-    valor = 4.56 # float
-    cidade = "Belo Horizonte" # str
-    acertei = True # bool
+    name = "John Doe" # str
+    age = 30 # int
+    value = 4.56 # float
+    city = "Belo Horizonte" # str
+    correct = True # bool
     ```
 
-    * Armazenamento de dados para uso posterior no código.
-    * Diferenças entre variáveis e valores literais.
-    * Ausência de declaração formal de tipo de variável no Python.
+    * Storing data for later use in the code.
+    * Differences between variables and literal values.
+    * Absence of formal variable type declaration in Python.
 
-* **Comentários:**
-    * Utilização de hashtags (#) para comentários e documentação do código.
+* **Comments:**
+
+    * Using hashtags (#) for comments and code documentation.
 
     ```python
-    # isto é um comentário
-    if 5 > 2: # isto também é um comentário
-      print('Cinco é maior que 2!')
+    # this is a comment
+    if 5 > 2: # this is also a comment
+      print('Five is greater than 2!')
 
-    def soma(a, b):
+    def sum(a, b):
       """
-      Este é um comentário para dizer que
-      esta função soma dois números, a e b
+      This is a comment to indicate that
+      this function sums two numbers, a and b
       """
       return a + b
 
-    print(soma(2, 2))
+    print(sum(2, 2))
 
-    # comentário em várias linhas
-    # print(soma(2, 3))
-    # print(soma(2, 4))
-    # print(soma(2, 5))
+    # multi-line comment
+    # print(sum(2, 3))
+    # print(sum(2, 4))
+    # print(sum(2, 5))
     ```
 
-    * Desativação de partes do código para testes e depuração.
-    * Atalhos para comentar e descomentar linhas e blocos no editor de texto.
+    * Disabling parts of the code for testing and debugging.
+    * Shortcuts to comment and uncomment lines and blocks in the text editor.
 
-## Dicas extras
+## Extra Tips
 
-* Configure o editor de texto para comentar linhas e blocos de código facilmente.
-* Configure o editor de texto para salvar automaticamente o arquivo trabalhado (alto-save).
-* Utilize o ambiente virtual para cada projeto para isolar bibliotecas e evitar conflitos.
-* Este resumo foi elaborado com base na transcrição do encontro e pode conter adaptações para melhor clareza e concisão. Recomendo assistir à gravação para obter uma compreensão mais aprofundada dos tópicos abordados.
+* Configure the text editor to comment lines and blocks of code easily.
+* Configure the text editor to automatically save the worked file (auto-save).
+* Use the virtual environment for each project to isolate libraries and avoid conflicts.
+* This summary was prepared based on the meeting transcript and may contain adaptations for better clarity and conciseness. I recommend watching the recording for a deeper understanding of the topics covered.
 
-## Exercícios
+## Exercises
 
-??? question "Defina variáveis para um novo programa de gestão hospitalar"
+??? question "Define variables for a new hospital management program"
 
-    - Um novo paciente chamado João deu entrada no hospital. Ele tem 20 anos e é um novo paciente deste hospital. Defina variáveis para armazenar o nome deste paciente, sua idade e se ele é um novo paciente da instituição. Mostre no sistema todas estas informações coletadas.
+    - A new patient named João was admitted to the hospital. He is 20 years old and is a new patient at this hospital. Define variables to store this patient's name, age, and whether he is a new patient at the institution. Display all this collected information in the system.
 
-    ??? "Antes de olhar a resposta, tende fazer sozinho."
+    ??? "Before looking at the answer, try to do it yourself."
 
         ```python
-        nome = 'João'
-        idade = 20
-        novo_paciente = True
-        print(nome, idade, novo_paciente) # (1)!
+        name = 'João'
+        age = 20
+        new_patient = True
+        print(name, age, new_patient) # (1)!
         ```
 
-        1. :man_raising_hand: Você pode passar mais de um valor para a função `print()`.
+        1. :man_raising_hand: You can pass more than one value to the `print()` function.
 
 ## Referências
 
