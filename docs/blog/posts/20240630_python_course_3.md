@@ -54,71 +54,102 @@ Get ready to join the thriving Python community, let's get started!
     6. :man_raising_hand: Try to use the formatted string options like `print(f'{30 %% 4 = }')`.
     7. :man_raising_hand: Try to use the formatted string options like `print(f'{30 ** 4 = }')`.
 
-- Augmented assignment operator:
+## Augmented assignment operator:
+
+```python
+# addiction
+add = 30
+add += 4 # (1)!
+
+# subtraction
+sub = 30
+sub -= 4 # (2)!
+
+# multiplication
+mult = 30
+mult *= 4 # (3)!
+
+# float division
+float_div = 30
+float_div /= 4 # (4)!
+
+# integer division
+int_div = 30
+int_div //= 4 # (5)!
+
+# modulis
+mod = 30
+mod %= 4 # (6)!
+
+# power
+pow = 30
+pow **= 4 # (7)!
+```
+
+1. :man_raising_hand: `add` will be equal to `34`.
+2. :man_raising_hand: `sub` will be equal to `26`.
+3. :man_raising_hand: `mult` will be equal to `120`.
+4. :man_raising_hand: `float_div` will be equal to `7.5`.
+5. :man_raising_hand: `int_div` will be equal to `7`.
+6. :man_raising_hand: `mod` will be equal to `2`..
+7. :man_raising_hand: `pow` will be equal to `810000`.
+
+## Operator precedence - PEMDAS
+
+??? question "What will be the value of `x` in `x = 10 + 3 * 2`?"
+
+    If you said `26` you must understand operator's precedence. **PEMDAS** stands for Parentheses, Exponents, Multiplication and Division, and Addition and Subtraction. This acronym serves as a useful mnemonic to remember the order of operations in Python. Which means that in `x = 10 + 3 * 2`, the `3 * 2` operation will be performed first, and its result will be add to `10`, totaling a final result equal to `16`. On the other hand, in `y = (10 + 3) * 2`, `y` will be equal to `26` because of the inclusion of the parentheses.
+
+| Order | Rule Component              | Operators |
+|-------|-----------------------------|-----------|
+| 1st   | Parentheses                 | ()        |
+| 2nd   | Exponents                   | **        |
+| 3rd   | Multiplication and Division | *, /      |
+| 4th   | Addition and Subtraction    | +, -      |
+
+??? question "Your turn!"
+
+    What's the result of the expressions?
 
     ```python
-    # addiction
-    add = 30
-    add += 4 # (1)!
+    x = (2 + 3) * 10 -3 # (1)!
 
-    # subtraction
-    sub = 30
-    sub -= 4 # (2)!
+    y = 10 + 3 * 2 ** 2 # (2)!
 
-    # multiplication
-    mult = 30
-    mult *= 4 # (3)!
-
-    # float division
-    float_div = 30
-    float_div /= 4 # (4)!
-
-    # integer division
-    int_div = 30
-    int_div //= 4 # (5)!
-
-    # modulis
-    mod = 30
-    mod %= 4 # (6)!
-
-    # power
-    pow = 30
-    pow **= 4 # (7)!
+    z = 10 + 3 * (2 ** 2) # (3)!
     ```
 
-    1. :man_raising_hand: `add` will be equal to `34`.
-    2. :man_raising_hand: `sub` will be equal to `26`.
-    3. :man_raising_hand: `mult` will be equal to `120`.
-    4. :man_raising_hand: `float_div` will be equal to `7.5`.
-    5. :man_raising_hand: `int_div` will be equal to `7`.
-    6. :man_raising_hand: `mod` will be equal to `2`..
-    7. :man_raising_hand: `pow` will be equal to `810000`.
+    1. :man_raising_hand: The result will be `47`.
+    2. :man_raising_hand: The result will be `22`.
+    3. :man_raising_hand: The result will be `22`.
 
-- Operator precedence - PEMDAS
+## Math functions
 
-    ??? question "What will be the value of `x` in `x = 10 + 3 * 2`?"
+- Built-in math functions
 
-        If you said `26` you must understand operator's precedence. **PEMDAS** stands for Parentheses, Exponents, Multiplication and Division, and Addition and Subtraction. This acronym serves as a useful mnemonic to remember the order of operations in Python. Which means that in `x = 10 + 3 * 2`, the `3 * 2` operation will be performed first, and its result will be add to `10`, totaling a final result equal to `16`. On the other hand, in `y = (10 + 3) * 2`, `y` will be equal to `26` because of the inclusion of the parentheses.
+    ```python
+    round(2.9)
 
-    | Order | Rule Component              | Operators |
-    |-------|-----------------------------|-----------|
-    | 1st   | Parentheses                 | ()        |
-    | 2nd   | Exponents                   | **        |
-    | 3rd   | Multiplication and Division | *, /      |
-    | 4th   | Addition and Subtraction    | +, -      |
+    abs(-2.9)
 
-    ??? question "Your turn!"
+    min(5, 10, 25)
 
-        What's the result of the expressions?
+    max(5, 10, 25)
 
-        ```python
-        x = (2 + 3) * 10 -3 # (1)!
+    pow(4, 3)
+    ```
 
-        y = 10 + 3 * 2 ** 2 # (2)!
+- The math module:
 
-        z = 10 + 3 * (2 ** 2) # (3)!
-        ```
+    ```python
+    import math
 
-        1. :man_raising_hand: The result will be `47`.
-        2. :man_raising_hand: The result will be `22`.
-        3. :man_raising_hand: The result will be `22`.
+    math.ceil(2.9)
+
+    math.floor(2.9)
+
+    math.pi
+    ```
+
+    # add python official documentation
+    # add pprint as help
