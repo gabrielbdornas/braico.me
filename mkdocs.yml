@@ -48,6 +48,7 @@ markdown_extensions:
   - footnotes
   - attr_list
   - md_in_html
+  - pymdownx.keys
   - pymdownx.tasklist  # Lista de tarefas
   - pymdownx.emoji  # Emojis
   - pymdownx.mark
