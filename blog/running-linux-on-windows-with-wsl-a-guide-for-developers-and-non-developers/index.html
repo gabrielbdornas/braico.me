@@ -18,7 +18,7 @@
     
     
       
-        <title>Python 18 Horas - W3schools #1 - Braico.me</title>
+        <title>Running Linux on Windows with WSL: A guide for developers and non-developers - Braico.me</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-18-horas-w3schools-1" class="md-skip">
+        <a href="#running-linux-on-windows-with-wsl-a-guide-for-developers-and-non-developers" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python 18 Horas - W3schools #1
+              Running Linux on Windows with WSL: A guide for developers and non-developers
             
           </span>
         </div>
@@ -396,27 +396,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-was-covered" class="md-nav__link">
+  <a href="#what-is-wsl" class="md-nav__link">
     <span class="md-ellipsis">
-      What was covered
+      What is WSL?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#extra-tips" class="md-nav__link">
+  <a href="#key-benefits-of-wsl" class="md-nav__link">
     <span class="md-ellipsis">
-      Extra Tips
+      Key benefits of WSL
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
+  <a href="#wsl-usage-prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercises
+      WSL usage prerequisites:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-11-wsl-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows 11 WSL installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-files-and-running-linux-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing files and running linux applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-running-a-simple-web-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: running a simple web server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Thoughts
     </span>
   </a>
   
@@ -487,7 +523,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-07-15 00:00:00" class="md-ellipsis">July 15, 2024</time>
+                        <time datetime="2024-11-07 00:00:00" class="md-ellipsis">November 7, 2024</time>
                       </div>
                     </li>
                     
@@ -498,8 +534,8 @@
                           <span class="md-ellipsis">
                             in
                             
-                              <a href="../category/python/">Python</a>, 
-                              <a href="../category/python-course/">Python course</a></span>
+                              <a href="../category/linux/">Linux</a>, 
+                              <a href="../category/windows/">Windows</a></span>
                         </div>
                       </li>
                     
@@ -510,7 +546,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              3 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -530,7 +566,7 @@
         
 
   
-    <a href="https://github.com/gabrielbdornas/code/edit/main/docs/blog/posts/20240715_python_w3schools_1.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/gabrielbdornas/code/edit/main/docs/blog/posts/20241107_wls.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -539,140 +575,134 @@
     
       
     
-    <a href="https://github.com/gabrielbdornas/code/raw/main/docs/blog/posts/20240715_python_w3schools_1.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/gabrielbdornas/code/raw/main/docs/blog/posts/20241107_wls.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-<div><h1 id="python-18-horas-w3schools-1">Python 18 Horas - W3schools #1<a class="headerlink" href="#python-18-horas-w3schools-1" title="Permanent link">⚓︎</a></h1>
-<p>Join us on an immersive journey through the universe of Python programming! In the Python 18Hours Meetings, guided by the comprehensive materials from <a href="https://www.w3schools.com/python/default.asp">W3Schools</a>, we will uncover the secrets of this powerful and versatile language, exploring its fundamentals and functionalities step by step.</p>
+<div><h1 id="running-linux-on-windows-with-wsl-a-guide-for-developers-and-non-developers">Running Linux on Windows with WSL: A guide for developers and non-developers<a class="headerlink" href="#running-linux-on-windows-with-wsl-a-guide-for-developers-and-non-developers" title="Permanent link">⚓︎</a></h1>
+<p>If you've ever wanted to use Linux commands within your Windows environment, the <strong>Windows Subsystem for Linux (WSL)</strong> is an excellent tool by Microsoft.
+It allows you to run Linux distributions on Windows, primarily through the command line, but also supports some graphical applications.</p>
 <!-- more -->
 
-<p><div class="video-container"><iframe src="https://www.youtube.com/embed/duci2JOnFbw" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
-<h2 id="what-was-covered">What was covered<a class="headerlink" href="#what-was-covered" title="Permanent link">⚓︎</a></h2>
-<ul>
+<h2 id="what-is-wsl">What is WSL?<a class="headerlink" href="#what-is-wsl" title="Permanent link">⚓︎</a></h2>
+<p>First things first.
+What is WSL?
+It's a tool that enables Linux to run directly within Windows, which is helpful for software development, system administration, or just exploring Linux tools without leaving Windows.
+Originally introduced as WSL1, WSL2 is an improved version that offers more robust performance and a real Linux kernel for enhanced compatibility.</p>
+<h2 id="key-benefits-of-wsl">Key benefits of WSL<a class="headerlink" href="#key-benefits-of-wsl" title="Permanent link">⚓︎</a></h2>
+<ol>
 <li>
-<p><strong>Introduction to Python:</strong></p>
-<ul>
-<li>Popularity and diverse applications (web, data analysis, automation, etc.).</li>
-<li>Ease of learning and intuitive syntax.</li>
-<li>Large and active community for support.</li>
-</ul>
+<p><strong>Low resource usage</strong>: Unlike full virtualization software like VirtualBox or VMware, WSL uses fewer resources, making it ideal for quickly accessing Linux tools without heavy memory or CPU demands.</p>
 </li>
 <li>
-<p><strong>Installation and basic usage:</strong></p>
-<ul>
-<li>It is recommended to use a virtual environment to isolate projects.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># create python virtual environment</span>
-<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
-
-<span class="c1"># activate virtual environment on linux/mac</span>
-<span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
-
-<span class="c1"># activate virtual environment on windows</span>
-<span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="n">Scripts</span><span class="o">/</span><span class="n">activate</span>
-</code></pre></div>
-<ul>
-<li>Running scripts through the interpreter and <code>.py</code> files.</li>
-</ul>
+<p><strong>Developer-focused but broadly useful</strong>: While it’s popular with developers, WSL offers useful tools for non-programmers as well, making it a versatile solution for anyone who wants to use Linux utilities within Windows.</p>
 </li>
 <li>
-<p><strong>Syntax and indentation:</strong></p>
+<p><strong>Integration with Windows</strong>: You can access Windows file systems directly from within Linux and vice versa, creating a seamless experience for file management across both environments.</p>
+</li>
+</ol>
+<h2 id="wsl-usage-prerequisites">WSL usage prerequisites:<a class="headerlink" href="#wsl-usage-prerequisites" title="Permanent link">⚓︎</a></h2>
+<p>To install the Windows Subsystem for Linux (WSL), your machine needs to meet the following prerequisites:</p>
+<ol>
+<li>
+<p><strong>Operating System</strong>:</p>
 <ul>
-<li>The importance of indentation for code organization and readability.</li>
+<li><strong>Windows 10</strong> (Version 2004 and higher, with Build 19041 and higher).</li>
+<li><strong>Windows 11</strong> (any version).</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">'Five is greater than 2!'</span><span class="p">)</span>
-</code></pre></div>
-<ul>
-<li>Indentation errors and how to identify them in the editor and interpreter.</li>
-<li>Best practices for code formatting with tabs (4 spaces).</li>
-</ul>
+<details class="tip">
+<summary>Tip</summary>
+<p>To check your Windows version and build number press <code>Win + R</code> to open the Run dialog, type <code>winver</code>, and press Enter.</p>
+</details>
 </li>
 <li>
-<p><strong>Variables:</strong></p>
+<p><strong>System Requirements</strong>:</p>
 <ul>
-<li>Concept and creation through value assignment.</li>
+<li><strong>64-bit Processor</strong>: WSL2 requires a 64-bit processor.
+Older 32-bit versions of Windows cannot run WSL2.</li>
+<li><strong>Virtualization Support</strong>: Your system must support virtualization.
+This is typically available on most modern CPUs, but make sure it’s enabled in the BIOS/UEFI 'settings.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">"John Doe"</span> <span class="c1"># str</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># int</span>
-<span class="n">value</span> <span class="o">=</span> <span class="mf">4.56</span> <span class="c1"># float</span>
-<span class="n">city</span> <span class="o">=</span> <span class="s2">"Belo Horizonte"</span> <span class="c1"># str</span>
-<span class="n">correct</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># bool</span>
-</code></pre></div>
-<ul>
-<li>Storing data for later use in the code.</li>
-<li>Differences between variables and literal values.</li>
-<li>Absence of formal variable type declaration in Python.</li>
-</ul>
+<details class="tip">
+<summary>Tip</summary>
+<p>Ensure that virtualization is enabled in your BIOS or UEFI settings.
+This is often labeled as Intel VT-x (for Intel processors) or AMD-V (for AMD processors).</p>
+</details>
 </li>
 <li>
-<p><strong>Comments:</strong></p>
-<ul>
-<li>Using hashtags (#) for comments and code documentation.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># this is a comment</span>
-<span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># this is also a comment</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">'Five is greater than 2!'</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<span class="w">  </span><span class="sd">"""</span>
-<span class="sd">  This is a comment to indicate that</span>
-<span class="sd">  this function sums two numbers, a and b</span>
-<span class="sd">  """</span>
-  <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-
-<span class="c1"># multi-line comment</span>
-<span class="c1"># print(sum(2, 3))</span>
-<span class="c1"># print(sum(2, 4))</span>
-<span class="c1"># print(sum(2, 5))</span>
-</code></pre></div>
-<ul>
-<li>Disabling parts of the code for testing and debugging.</li>
-<li>Shortcuts to comment and uncomment lines and blocks in the text editor.</li>
-</ul>
+<p><strong>Windows Update</strong>: Make sure your system is up-to-date with the latest Windows updates.
+WSL2 requires specific updates that are available in the latest versions of Windows 10 and 11.</p>
 </li>
-</ul>
-<h2 id="extra-tips">Extra Tips<a class="headerlink" href="#extra-tips" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li>Configure the text editor to comment lines and blocks of code easily.</li>
-<li>Configure the text editor to automatically save the worked file (auto-save).</li>
-<li>Use the virtual environment for each project to isolate libraries and avoid conflicts.</li>
-<li>This summary was prepared based on the meeting transcript and may contain adaptations for better clarity and conciseness. I recommend watching the recording for a deeper understanding of the topics covered.</li>
-</ul>
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">⚓︎</a></h2>
-<details class="question">
-<summary>Define variables for a new hospital management program</summary>
-<ul>
-<li>A new patient named João was admitted to the hospital. He is 20 years old and is a new patient at this hospital. Define variables to store this patient's name, age, and whether he is a new patient at the institution. Display all this collected information in the system.</li>
-</ul>
-<details>
-<summary>Before looking at the answer, try to do it yourself.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">'João'</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">new_patient</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">new_patient</span><span class="p">)</span> <span class="c1"># (1)!</span>
+</ol>
+<p>Once you have verified these prerequisites, you can proceed with the installation.</p>
+<h2 id="windows-11-wsl-installation">Windows 11 WSL installation<a class="headerlink" href="#windows-11-wsl-installation" title="Permanent link">⚓︎</a></h2>
+<p>To enable WSL on Windows 11:</p>
+<details class="info">
+<summary>Info</summary>
+<p>If you're using Windows 10, the installation process is a bit different. A quick online search should guide you through it, but if you need any extra help, feel free to ask in the comments below.</p>
+</details>
+<ol>
+<li>Open PowerShell as Administrator.</li>
+<li>
+<p>Run the following command:</p>
+<div class="highlight"><pre><span></span><code>wsl<span class="w"> </span>--install<span class="w"> </span><span class="c1"># (1)!</span>
 </code></pre></div>
 <ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> You can pass more than one value to the <code>print()</code> function.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> This command installs WSL, sets WSL2 as the default version, and installs Ubuntu as the default Linux distribution. <strong>After the installation, you may need to restart your computer</strong>. To install other Linux distributions, use the command <code>wsl --install -d &lt;distribution-name&gt;</code>. You can view available distribution options by running <code>wsl --list --online</code>.
+For a full list of <code>wsl</code> command options, use the <code>--help</code> flag. For example, you can check the status and list all installed WSL distributions by using <code>wsl --list --verbose</code>.</li>
 </ol>
+<details class="tip">
+<summary>Tip</summary>
+<p>Install Windows Terminal  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"></path></svg></span>  through Microsoft Store to streamline your WSL experience.</p>
 </details>
+</li>
+<li>
+<p>After installation, you can launch WSL by searching for "WSL" or "Ubuntu" in the Start Menu <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m0 93.7 183.6-25.3v177.4H0V93.7zm0 324.6 183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"></path></svg></span>.</p>
+</li>
+<li>
+<p>When you open WSL for the first time, you'll be prompted to create a Linux username and password for administrative tasks.</p>
+<details class="tip">
+<summary>Tip</summary>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:"> When you're prompted to enter your password, you won’t see any characters appear on the screen as you type—this is normal and a security feature. Just type your password carefully and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
 </details>
+</li>
+</ol>
+<h2 id="accessing-files-and-running-linux-applications">Accessing files and running linux applications<a class="headerlink" href="#accessing-files-and-running-linux-applications" title="Permanent link">⚓︎</a></h2>
+<p>One unique feature of WSL is the ability to interact with files across both Windows and Linux environments.</p>
+<p>For instance:</p>
+<ul>
+<li>Windows directories are accessible from Linux via <code>/mnt/c</code>.</li>
+<li>
+<p class="annotate">You can open Linux files directly in Windows Explorer by typing <code>\\wsl$\Ubuntu</code> (1) in the address bar.</p>
+<ol>
+<li><img alt="🙋🏿‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-1f3ff-200d-2642-fe0f.svg" title=":man_raising_hand_tone5:"> Replace <code>Ubuntu</code> in case your linux distribution is different.</li>
+</ol>
+</li>
+</ul>
+<h2 id="example-running-a-simple-web-server">Example: running a simple web server<a class="headerlink" href="#example-running-a-simple-web-server" title="Permanent link">⚓︎</a></h2>
+<p>A quick example of how WSL can be used effectively is running a web server:</p>
+<ol>
+<li>In WSL, navigate to the directory where you want to serve files.</li>
+<li>
+<p>Run a simple Python HTTP server:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8000</span>
+</code></pre></div>
+</li>
+<li>
+<p>Access this server in a Windows browser by going to <code>http://localhost:8000</code>.</p>
+</li>
+</ol>
+<h2 id="final-thoughts">Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permanent link">⚓︎</a></h2>
+<p>WSL bridges the gap between Windows and Linux, allowing a streamlined workflow for both development and general Linux usage within Windows.
+Whether you're a developer needing a Linux environment or just curious to explore Linux tools, WSL provides a flexible, efficient option.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li><a href="https://www.w3schools.com/python/default.asp">W3schools Python HOME</a>.</li>
-<li><a href="https://www.w3schools.com/python/python_intro.asp">W3schools Python Intro</a>.</li>
-<li><a href="https://www.w3schools.com/python/python_getstarted.asp">W3schools Python Get Started</a>.</li>
-<li><a href="https://www.w3schools.com/python/python_syntax.asp">W3schools Python Syntax</a>.</li>
-<li><a href="https://www.w3schools.com/python/python_comments.asp">W3schools Python Comments</a>.</li>
-<li><a href="https://docs.python.org/3/tutorial/appetite.html">Python documentation - Whetting Your Appetite</a>.</li>
-<li><a href="https://docs.python.org/3/tutorial/interpreter.html">Python documentation - Using the Python Interpreter</a>.</li>
-<li><a href="https://docs.python.org/3/tutorial/introduction.html">Python documentation - An Informal Introduction to Python</a>.</li>
+<li><a href="https://youtu.be/o1_E4PBl30s?si=SgUMyhT4YC6uNKaR">One of the BEST things Microsoft has ever done - How to use WSL (Linux within Windows)</a>.</li>
+<li><a href="https://learn.microsoft.com/en-us/windows/wsl/install">How to install Linux on Windows with WSL</a>.</li>
+<li><a href="https://learn.microsoft.com/en-us/windows/wsl/faq">Frequently Asked Questions about Windows Subsystem for Linux</a>.</li>
 </ul></div>
 
 
@@ -696,7 +726,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 25, 2024 17:45:17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 7, 2024 22:22:03</span>
   </span>
 
     
@@ -706,7 +736,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 16, 2024 23:36:29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 7, 2024 22:22:03</span>
   </span>
 
     
