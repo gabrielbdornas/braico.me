@@ -450,6 +450,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-a-fancier-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using a Fancier Terminal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#final-thoughts" class="md-nav__link">
     <span class="md-ellipsis">
       Final Thoughts
@@ -546,7 +555,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              4 min read
+                              7 min read
                             
                           </span>
                         </div>
@@ -587,6 +596,11 @@
 It allows you to run Linux distributions on Windows, primarily through the command line, but also supports some graphical applications.</p>
 <!-- more -->
 
+<p>As a Linux user, my search for this WSL solution began after a frustrating experience with Windows tools like Git Bash, which felt clunky and limited in comparison.</p>
+<p>As you'll see, installing WSL alongside with Oh My Zsh terminal, transforms the Windows terminal into a far more powerful and visually appealing environment, similar to what I was used to on Linux.</p>
+<p>For non-technical users, WSL offers a gentle introduction to Linux, letting you explore this powerful operating system without fully switching away from Windows. With WSL, you can try out new tools and commands that can simplify tasks and boost productivity, especially useful if you're curious about Linux or have heard about its efficiency for certain tasks.</p>
+<p>The setup I present here, allows you to gradually get comfortable with a Linux environment, learn at your own pace, and see the benefits firsthand, all within the familiarity of your Windows system.</p>
+<p>I’m confident that once you experience the flexibility and ease of using Linux tools within Windows through WSL, you might just find yourself wondering how you ever worked without it!</p>
 <h2 id="what-is-wsl">What is WSL?<a class="headerlink" href="#what-is-wsl" title="Permanent link">⚓︎</a></h2>
 <p>First things first.
 What is WSL?
@@ -695,9 +709,48 @@ For a full list of <code>wsl</code> command options, use the <code>--help</code>
 <p>Access this server in a Windows browser by going to <code>http://localhost:8000</code>.</p>
 </li>
 </ol>
+<h2 id="using-a-fancier-terminal">Using a Fancier Terminal<a class="headerlink" href="#using-a-fancier-terminal" title="Permanent link">⚓︎</a></h2>
+<p>To enhance our user experience, let's chance the Ubuntu's default terminal to <a href="https://ohmyz.sh/">Oh My Zsh</a>.
+Installing Zsh with Oh My Zsh on WSL create a powerful and visually appealing environment that closely mirrors the efficiency of Linux.</p>
+<p>It introduces features like auto-suggestions, syntax highlighting, and easy customization, making command-line tasks smoother and more intuitive.</p>
+<p>This strategy not only enhances the terminal’s appearance but also delivers a truly efficient, Linux-like command-line experience for Windows users.</p>
+<ol>
+<li>
+<p>Open your WSL terminal and run the commands below to install Zsh:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="c1"># (1)!</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>zsh<span class="w"> </span>-y
+chsh<span class="w"> </span>-s<span class="w"> </span><span class="k">$(</span>which<span class="w"> </span>zsh<span class="k">)</span><span class="w"> </span><span class="c1"># (2)!</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> Run one command at the time.</li>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> You may need to log out and log back in to see the change, or simply open a new WSL terminal window to start using Zsh.</li>
+</ol>
+</li>
+<li>
+<p>Install Oh My Zsh:</p>
+</li>
+</ol>
+<p>Oh My Zsh is a framework for managing Zsh configurations, and it comes with themes and plugins that make your terminal experience more powerful and customizable.</p>
+<p>We'll cover just the basics here, but it’s exactly what we need to get started.To install it, use this command:</p>
+<div class="highlight"><pre><span></span><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+</code></pre></div>
+<p>Give Zsh and Oh My Zsh a try on WSL, and let me know in the comments below if you enjoy the more visually appealing and productive terminal experience!</p>
 <h2 id="final-thoughts">Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permanent link">⚓︎</a></h2>
-<p>WSL bridges the gap between Windows and Linux, allowing a streamlined workflow for both development and general Linux usage within Windows.
-Whether you're a developer needing a Linux environment or just curious to explore Linux tools, WSL provides a flexible, efficient option.</p>
+<p>WSL bridges the gap between Windows and Linux, creating a streamlined workflow for development and general Linux usage within Windows.
+This integration not only serves technical needs but is also an excellent entry point for those new to Linux.</p>
+<p>For newcomers, WSL offers a way to explore Linux tools and get accustomed to the Linux terminal without committing to a full operating system switch.
+This means you can experiment without reconfiguring your entire setup, making it easy to see if Linux aligns with your expectation and workflows.</p>
+<p>For technical users, WSL resolves some familiar frustrations, like line-ending compatibility issues between Windows and Linux.
+By writing and running code in a Linux environment, you avoid these interruptions, improving the consistency of your development process.</p>
+<p>Additionally, WSL provides a more robust terminal experience than options like Git Bash, CMD, or PowerShell, which often fall short in user experience, at least in my opinion. With WSL, you gain access to a more native Linux terminal, offering improved tool support and a smoother, more powerful command-line interface.</p>
+<p>Whether you're a developer or just curious, WSL presents a flexible, efficient gateway to Linux that can significantly enhance your productivity and comfort in either system.</p>
+<details class="note">
+<summary>Get in touch</summary>
+<p>I worked hard to ensure that all the content in this post is accurate and error-free.
+However, I know that mistakes can happen, as I'm only human!
+If you find any, or if you have questions or suggestions, please don’t hesitate to reach out in the comment section below.</p>
+<p>If you prefer, send an email to <strong>gabrielbdornas@gmail.com</strong>.</p>
+</details>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li><a href="https://youtu.be/o1_E4PBl30s?si=SgUMyhT4YC6uNKaR">One of the BEST things Microsoft has ever done - How to use WSL (Linux within Windows)</a>.</li>
@@ -726,7 +779,7 @@ Whether you're a developer needing a Linux environment or just curious to explor
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 8, 2024 16:48:35</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 8, 2024 18:58:52</span>
   </span>
 
     
